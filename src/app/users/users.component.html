@@ -1,42 +1,67 @@
-<td-layout-nav logo="assets:covalent" navigationRoute="/">
+<td-layout-nav navigationRoute="/">
   <button mat-icon-button td-menu-button tdLayoutToggle>
     <mat-icon>menu</mat-icon>
   </button>
   <div td-toolbar-content layout="row" layout-align="center center" flex>
-    <span>Quickstart</span>
+    <img src="../../assets/images/kylo-logo-rev.png" width="150px">
+
+
+
+
+    <div *ngIf="showSearchBar()" fxLayout="row" style="margin-left: 400px;" fxLayoutAlign="center" fxFlex class="global-search-container">
+      <div style="width: 40px; height:40px; margin-left: 6px; margin-right: 6px; display: inline-block">
+        <mat-icon style="vertical-align: bottom">search</mat-icon>
+      </div>
+      <mat-form-field class="searchBar condensed-no-float md-block global-search" md-no-float style="text-align: center;"
+        flex>
+        <input matInput id="search-input" [(ngModel)]="searchQuery" class="global-search-input" 
+               style="color:white; font-size: 14px; padding: 0px 0px 5px 2px;">
+      </mat-form-field>
+      <button mat-buton class="mat-ink-ripple" [disabled]="searchQuery == '' || searchQuery == null"
+        (click)="search()">search</button>
+      <mat-icon (click)="endSearch()" style="vertical-align: middle;margin-left: 10px;">close</mat-icon>
+    </div>
+
     <span flex></span>
-    <a mat-icon-button matTooltip="Docs" href="https://teradata.github.io/covalent/" target="_blank"><mat-icon>chrome_reader_mode</mat-icon></a>
-    <a mat-icon-button matTooltip="Github" href="https://github.com/teradata/covalent" target="_blank"><mat-icon svgIcon="assets:github"></mat-icon></a>
+
+
+    <div style="width: 40px; height:40px; margin-left: 6px; margin-right: 6px">
+      <mat-icon style="vertical-align: bottom" *ngIf="showPreSearchBar()" (click)="initiateSearch()">search</mat-icon>
+    </div>
+    <div style="width: 40px; height:40px; margin-left: 6px; margin-right: 6px">
+      <mat-icon style="vertical-align: bottom">notifications</mat-icon>
+    </div>
+    <div style="width: 40px; height:40px; margin-left: 6px; margin-right: 6px">
+      <mat-icon style="vertical-align: bottom">more_vert</mat-icon>
+    </div>
   </div>
-  <td-layout-manage-list
-                        [opened]="media.registerQuery('gt-sm') | async"
-                        [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'push'"
-                        [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '257px' : '100%'">
+  <td-layout-manage-list [opened]="media.registerQuery('gt-sm') | async" [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'push'"
+    [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '257px' : '100%'">
     <mat-toolbar td-sidenav-content>
       <mat-toolbar-row>
-        <span>Users</span>
+        <span>Feeds</span>
       </mat-toolbar-row>
     </mat-toolbar>
     <mat-nav-list td-sidenav-content [tdLayoutManageListClose]="!media.query('gt-sm')">
       <a mat-list-item>
-        <mat-icon matListIcon>account_circle</mat-icon>
-        All Users
+        <mat-icon matListIcon>linear_scale</mat-icon>
+        Feeds
       </a>
       <a mat-list-item>
-        <mat-icon matListIcon>star</mat-icon>
-        Favorites
+        <mat-icon matListIcon>folder_special</mat-icon>
+        Categories
       </a>
       <a mat-list-item>
-        <mat-icon matListIcon>verified_user</mat-icon>
-        Administrators
+        <mat-icon matListIcon>beenhere</mat-icon>
+        SLA
       </a>
       <a mat-list-item>
-        <mat-icon matListIcon>supervisor_account</mat-icon>
-        Non-Admins
+        <mat-icon matListIcon>transform</mat-icon>
+        Visual Query
       </a>
       <a mat-list-item>
-        <mat-icon matListIcon>inbox</mat-icon>
-        Archived
+        <mat-icon matListIcon>grid_on</mat-icon>
+        Catalog
       </a>
     </mat-nav-list>
     <mat-toolbar>
@@ -45,16 +70,29 @@
           <mat-icon>arrow_back</mat-icon>
         </button>
         <div td-toolbar-content layout="row" layout-align="start center" flex>
-          <span>All Users</span>
+          <span>All Feeds</span>
           <span flex></span>
-          <button mat-icon-button><mat-icon >view_module</mat-icon></button>
-          <button mat-icon-button><mat-icon >sort</mat-icon></button>
-          <button mat-icon-button><mat-icon >settings</mat-icon></button>
-          <button mat-icon-button><mat-icon >more_vert</mat-icon></button>
         </div>
       </mat-toolbar-row>
     </mat-toolbar>
-    <mat-card class="push-bottom-xxl" tdMediaToggle="gt-xs" [mediaClasses]="['push']">
+    <filtered-paginated-table-view      
+        [filteredData]="filteredData"
+        [columns]="columns"
+        [clickable]="true"
+        [sortable]="true"
+        [sortOrder]="'DESC'"
+        [sortBy]="sortBy"
+        [firstLast]="false"
+        [pageSize]="pageSize"
+        [filteredTotal]="filteredTotal"
+        (rowClicked)="groupDetails($event)"
+        (sortChanged)="sort($event)"
+        (searchDebounced)="search($event)"
+        (pageSizeChanged)="onPageSizeChange($event)"
+        [allowedPageSize]="[5,10,20,50]"
+        >
+    </filtered-paginated-table-view>
+    <!-- <mat-card class="push-bottom-xxl" tdMediaToggle="gt-xs" [mediaClasses]="['push']">
       <td-search-box class="push-left push-right" placeholder="search" [alwaysVisible]="true" (searchDebounce)="filterUsers($event)"></td-search-box>
       <mat-divider></mat-divider>
       <ng-template tdLoading="users.list">
@@ -91,8 +129,8 @@
           </ng-template>
         </mat-list>
       </ng-template>
-    </mat-card>
-  </td-layout-manage-list>   
+    </mat-card> -->
+  </td-layout-manage-list>
 </td-layout-nav>
 <a mat-fab color="accent" class="mat-fab-bottom-right fixed z-3" [routerLink]="['add']">
   <mat-icon>add</mat-icon>

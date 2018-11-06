@@ -1,20 +1,13 @@
 import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { UsersComponent } from './users.component';
-import { UsersFormComponent } from './form/form.component';
+import { FeedsComponent } from './users.component';
 
 const routes: Routes = [{
-    path: 'users',
+    path: '',
     children: [{
       path: '',
-      component: UsersComponent,
-    }, {
-      path: 'add',
-      component: UsersFormComponent,
-    }, {
-      path: ':id/edit',
-      component: UsersFormComponent,
+      component: FeedsComponent,
     }],
 }];
 

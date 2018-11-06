@@ -13,14 +13,13 @@ import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 import { CovalentCommonModule } from '@covalent/core/common';
 import { CovalentLayoutModule } from '@covalent/core/layout';
 import { CovalentMediaModule } from '@covalent/core/media';
 import { CovalentLoadingModule } from '@covalent/core/loading';
-
-import { CovalentHttpModule, IHttpInterceptor } from '@covalent/http';
-
+import { CovalentHttpModule } from '@covalent/http';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { appRoutes } from './app.routes';
@@ -32,7 +31,6 @@ import { MOCK_API } from '../config/api.config';
 import { USER_PROVIDER, USERS_API } from './users';
 import { MainComponent } from './main.component';
 import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 
 const httpInterceptorProviders: Type<any>[] = [
   RequestInterceptor,
@@ -47,7 +45,6 @@ export function getAPI(): string {
     AppComponent,
     MainComponent,
     LoginComponent,
-    DashboardComponent,
   ], // directives, components, and pipes owned by this NgModule
   imports: [
     // angular modules
@@ -65,6 +62,8 @@ export function getAPI(): string {
     MatDividerModule,
     MatInputModule,
     MatToolbarModule,
+    MatInputModule,
+    MatProgressBarModule,
     // covalent modules
     CovalentCommonModule,
     CovalentLayoutModule,
