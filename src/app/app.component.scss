@@ -1,0 +1,19 @@
+.kylo-app-search-box-container .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label,.kylo-app-search-box-container .mat-form-field-empty.mat-form-field-label {
+    top: 10px;
+}
+.kylo-app-search-box-container .mat-form-field-appearance-legacy .mat-form-field-infix {
+    height: 35px;
+    border: 0;
+    padding: 0;
+}
+.kylo-app-search-box-container .mat-form-field-prefix, .kylo-app-search-box-container .mat-form-field-suffix {
+    vertical-align: top;
+    display: inline-block;
+}
+.kylo-app-search-box-container .mat-form-field-appearance-legacy .mat-form-field-label{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 17px;
+}
+.kylo-app-search-box-container .mat-form-field-appearance-legacy .mat-form-field-wrapper{
+    padding-bottom: 0 !important;
+}

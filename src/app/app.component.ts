@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Dir } from '@angular/cdk/bidi';
 import { MatIconRegistry } from '@angular/material/icon';
@@ -9,6 +9,7 @@ import { TdMediaService } from '@covalent/core/media';
   selector: 'qs-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  encapsulation : ViewEncapsulation.None
 })
 export class AppComponent {
 

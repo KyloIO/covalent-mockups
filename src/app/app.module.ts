@@ -2,7 +2,7 @@ import { NgModule, Type } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule, Title }  from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -36,6 +36,19 @@ import { MainComponent } from './main.component';
 import { LoginComponent } from './login/login.component';
 import { CovalentSearchModule } from '@covalent/core/search';
 
+
+
+
+
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CovalentDataTableModule } from '@covalent/core/data-table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+
+
+
+
 const httpInterceptorProviders: Type<any>[] = [
   RequestInterceptor,
 ];
@@ -58,6 +71,7 @@ export function getAPI(): string {
     FormsModule,
     HttpClientModule,
     HttpModule,
+    ReactiveFormsModule,
     // material modules
     MatButtonModule,
     MatCardModule,
@@ -70,7 +84,12 @@ export function getAPI(): string {
     MatProgressBarModule,
     MatSlideToggleModule,
     MatMenuModule,
+    MatTooltipModule,
+    MatSnackBarModule,
+    MatFormFieldModule,
+    
     // covalent modules
+    CovalentDataTableModule,
     CovalentLoadingModule,
     CovalentMediaModule,
     CovalentLayoutModule,

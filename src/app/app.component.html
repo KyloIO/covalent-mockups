@@ -1,32 +1,43 @@
 <td-layout-nav logo="assets:kylo-logo-white" navigationRoute="/">
-    <button mat-icon-button td-menu-button [tdLayoutToggle] = "true">
+    <button mat-icon-button td-menu-button>
         <mat-icon>menu</mat-icon>
     </button>
-    <div td-toolbar-content layout="row" layout-align="center center" flex>
-        <div *ngIf="showSearchBar()" fxLayout="row" style="margin-left: 400px;" fxLayoutAlign="center" fxFlex class="global-search-container">
-            <div style="width: 40px; height:40px; margin-left: 6px; margin-right: 6px; display: inline-block">
-                <mat-icon style="vertical-align: bottom">search</mat-icon>
+    <div td-toolbar-content layout="row" style="justify-content: flex-end;" flex>
+        <div style="width: 100%; height: 35px;" *ngIf="showSearchBar()" fxLayout="row" fxLayoutAlign="center" fxFlex
+            class="global-search-container">
+
+            <div layout="row" layout-align="start center" class="kylo-app-search-box-container" flex style="display:inline-flex; width: 100%;">
+                <span flex-gt-xs="15"></span>
+                <span flex-gt-sm="70" flex layout="row" layout-align="start center" class="td-search-box mat-whiteframe-z1"
+                    [class.td-search-active]="searchInput.focused">
+                    <mat-form-field flex floatLabel="never" style="background: #899296; height: 35px; border-radius: 2px;">
+                        <span class="td-search-icon" matPrefix>
+                            <mat-icon style="padding: 5px; padding-right: 30px; width: 24px;height: 24px;">search</mat-icon>
+                        </span>
+                        <input id="ac-search-bar" #searchInput="matInput" matInput placeholder="Search apps and scripts"
+                            aria-label="Apps">
+                    </mat-form-field>
+                </span>
             </div>
-            <mat-form-field class="searchBar condensed-no-float md-block global-search" md-no-float style="text-align: center;"
-                flex>
-                <input matInput id="search-input" [(ngModel)]="searchQuery" class="global-search-input" style="color:white; font-size: 14px; padding: 0px 0px 5px 2px;">
-            </mat-form-field>
-            <button mat-buton class="mat-ink-ripple" [disabled]="searchQuery == '' || searchQuery == null" (click)="search()">search</button>
+
             <mat-icon (click)="endSearch()" style="vertical-align: middle;margin-left: 10px;">close</mat-icon>
+
         </div>
 
-        <span flex></span>
+        <div style="display: inline-flex;">
 
+            <div style="width: 40px; height:40px; margin-left: 6px; margin-right: 6px">
+                <mat-icon style="vertical-align: bottom" *ngIf="showPreSearchBar()" (click)="initiateSearch()">search</mat-icon>
+            </div>
+            <div style="width: 40px; height:40px; margin-left: 6px; margin-right: 6px">
+                <mat-icon style="vertical-align: bottom">notifications</mat-icon>
+            </div>
+            <div style="width: 40px; height:40px; margin-left: 6px; margin-right: 6px">
+                <mat-icon style="vertical-align: bottom">more_vert</mat-icon>
+            </div>
 
-        <div style="width: 40px; height:40px; margin-left: 6px; margin-right: 6px">
-            <mat-icon style="vertical-align: bottom" *ngIf="showPreSearchBar()" (click)="initiateSearch()">search</mat-icon>
         </div>
-        <div style="width: 40px; height:40px; margin-left: 6px; margin-right: 6px">
-            <mat-icon style="vertical-align: bottom">notifications</mat-icon>
-        </div>
-        <div style="width: 40px; height:40px; margin-left: 6px; margin-right: 6px">
-            <mat-icon style="vertical-align: bottom">more_vert</mat-icon>
-        </div>
+
     </div>
     <router-outlet></router-outlet>
 </td-layout-nav>
