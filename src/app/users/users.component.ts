@@ -23,7 +23,7 @@ export class FeedsComponent  extends BaseFilteredPaginatedTableView implements O
     { name: 'created', label: 'Created', sortable: true, filter : true },
     { name: 'lastAccess', label: 'Last Updated', sortable: true, filter : true },
   ];
-  searchQuery : string = null;
+  
   sortBy : string = 'displayName';
 
   constructor(private _titleService: Title,
@@ -38,22 +38,6 @@ export class FeedsComponent  extends BaseFilteredPaginatedTableView implements O
     this._titleService.setTitle('Kylo');
     this.load();
   }
-
-  showPreSearchBar(): boolean {
-    return this.searchQuery == null;
-  };
-
-  initiateSearch(): void {
-    this.searchQuery = '';
-  };
-
-  showSearchBar(): boolean {
-    return this.searchQuery != null
-  };
-
-  endSearch(): void {
-    return this.searchQuery = null;
-  };
 
   // filterUsers(displayName: string = ''): void {
   //   this.filteredUsers = this.users.filter((user: IUser) => {

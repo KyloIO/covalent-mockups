@@ -69,6 +69,6 @@ import 'zone.js/dist/zone';  // Included with Angular-CLI.
 // import 'intl';  // Run `npm install --save intl`.
 
 // rxjs imports
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/toPromise';
-import 'rxjs/add/operator/map';
+// import 'rxjs/add/operator/catch';
+// import 'rxjs/add/operator/toPromise';
+// import 'rxjs/add/operator/map';

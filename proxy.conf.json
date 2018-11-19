@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "https://appcenter.ux.ac.uda.io",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

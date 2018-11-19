@@ -1,1 +1,35 @@
-<router-outlet></router-outlet>
+<td-layout-nav logo="assets:kylo-logo-white" navigationRoute="/">
+    <button mat-icon-button td-menu-button [tdLayoutToggle] = "true">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <div td-toolbar-content layout="row" layout-align="center center" flex>
+        <div *ngIf="showSearchBar()" fxLayout="row" style="margin-left: 400px;" fxLayoutAlign="center" fxFlex class="global-search-container">
+            <div style="width: 40px; height:40px; margin-left: 6px; margin-right: 6px; display: inline-block">
+                <mat-icon style="vertical-align: bottom">search</mat-icon>
+            </div>
+            <mat-form-field class="searchBar condensed-no-float md-block global-search" md-no-float style="text-align: center;"
+                flex>
+                <input matInput id="search-input" [(ngModel)]="searchQuery" class="global-search-input" style="color:white; font-size: 14px; padding: 0px 0px 5px 2px;">
+            </mat-form-field>
+            <button mat-buton class="mat-ink-ripple" [disabled]="searchQuery == '' || searchQuery == null" (click)="search()">search</button>
+            <mat-icon (click)="endSearch()" style="vertical-align: middle;margin-left: 10px;">close</mat-icon>
+        </div>
+
+        <span flex></span>
+
+
+        <div style="width: 40px; height:40px; margin-left: 6px; margin-right: 6px">
+            <mat-icon style="vertical-align: bottom" *ngIf="showPreSearchBar()" (click)="initiateSearch()">search</mat-icon>
+        </div>
+        <div style="width: 40px; height:40px; margin-left: 6px; margin-right: 6px">
+            <mat-icon style="vertical-align: bottom">notifications</mat-icon>
+        </div>
+        <div style="width: 40px; height:40px; margin-left: 6px; margin-right: 6px">
+            <mat-icon style="vertical-align: bottom">more_vert</mat-icon>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</td-layout-nav>
+<a mat-fab color="accent" class="mat-fab-bottom-right fixed z-3" [routerLink]="['add']">
+    <mat-icon>add</mat-icon>
+</a>

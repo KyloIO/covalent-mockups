@@ -12,6 +12,7 @@ import { TdMediaService } from '@covalent/core/media';
 })
 export class AppComponent {
 
+  searchQuery : string = null;
 
   constructor(private _iconRegistry: MatIconRegistry,
               private _domSanitizer: DomSanitizer,
@@ -42,6 +43,10 @@ export class AppComponent {
       this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/listener.svg'));
     this._iconRegistry.addSvgIconInNamespace('assets', 'querygrid',
       this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/querygrid.svg'));
+      this._iconRegistry.addSvgIconInNamespace('assets', 'kylo',
+      this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/kylo-logo.svg'));
+      this._iconRegistry.addSvgIconInNamespace('assets', 'kylo-logo-white',
+      this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/kylo-logo-white.svg'));
     
     // SVG Icons
     this._iconRegistry.addSvgIcon('teradata', this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/teradata.svg'));
@@ -60,6 +65,21 @@ export class AppComponent {
 
 
   }
+  showPreSearchBar(): boolean {
+    return this.searchQuery == null;
+  };
+
+  initiateSearch(): void {
+    this.searchQuery = '';
+  };
+
+  showSearchBar(): boolean {
+    return this.searchQuery != null
+  };
+
+  endSearch(): void {
+    return this.searchQuery = null;
+  };
 
   get activeTheme(): string {
     return localStorage.getItem('theme');
