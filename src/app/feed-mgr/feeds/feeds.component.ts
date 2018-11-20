@@ -4,14 +4,14 @@ import { Title } from '@angular/platform-browser';
 import { TdLoadingService } from '@covalent/core/loading';
 import { TdMediaService } from '@covalent/core/media';
 
-import { UserService, IUser } from './services/user.service';
-import { BaseFilteredPaginatedTableView } from '../filtered-paginated-table-view/BaseFilteredPaginatedTableView';
+import { UserService, IUser } from '../services/feed-mgr.service';
+import { BaseFilteredPaginatedTableView } from '../../filtered-paginated-table-view/BaseFilteredPaginatedTableView';
 import { TdDataTableService, ITdDataTableColumn } from '@covalent/core/data-table';
 
 @Component({
   selector: 'qs-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss'],
+  templateUrl: './feeds.component.html',
+  styleUrls: ['./feeds.component.scss'],
 })
 export class FeedsComponent  extends BaseFilteredPaginatedTableView implements OnInit{
 

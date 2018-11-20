@@ -24,11 +24,11 @@ import { CovalentMediaModule } from '@covalent/core/media';
 import { CovalentLoadingModule } from '@covalent/core/loading';
 import { CovalentDataTableModule } from '@covalent/core/data-table';
 
-import { FeedsComponent } from './users.component';
+import { FeedsComponent } from './feeds/feeds.component';
 
-import { userRoutes } from './users.routes';
+import { userRoutes } from './feed-mgr.routes';
 
-import { USER_PROVIDER, USERS_API } from './services/user.service';
+import { USER_PROVIDER, USERS_API } from './services/feed-mgr.service';
 import { KyloCommonModule } from '../common.module';
 @NgModule({
   declarations: [
@@ -68,4 +68,4 @@ import { KyloCommonModule } from '../common.module';
     USER_PROVIDER,
   ],
 })
-export class UsersModule {}
+export class FeedMgrModule {}

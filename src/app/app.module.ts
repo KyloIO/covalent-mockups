@@ -31,7 +31,7 @@ import { AppComponent } from './app.component';
 import { RequestInterceptor } from '../config/interceptors/request.interceptor';
 import { MOCK_API } from '../config/api.config';
 
-import { USER_PROVIDER, USERS_API } from './users';
+import { USER_PROVIDER, USERS_API } from './feed-mgr';
 import { MainComponent } from './main.component';
 import { LoginComponent } from './login/login.component';
 import { CovalentSearchModule } from '@covalent/core/search';
