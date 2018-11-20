@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
     selector: 'qs-categories',
@@ -8,11 +10,21 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class CategoriesComponent {
 
-    constructor() {
+    apps: any = [];
+
+    constructor(private http: HttpClient) {
         console.log("Inside");
     }
-    ngOnInit() {
 
+    ngOnInit() {
+        this.getCategories().subscribe(data => {
+            this.apps = data;
+            console.log(data);
+        });
+    }
+
+    getCategories(): Observable<any> {
+        return this.http.get("data/categories.json");
     }
 
 }

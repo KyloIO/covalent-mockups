@@ -3,3 +3,41 @@
         background-color: orange;
     }
 }
+.td-layout-nav-wrapper {
+    background-color: #E0E0E0;
+}
+.category-icons {
+    color: #757575 !important;
+}
+.sub-header {
+    padding: 8px;
+}
+.sub-header-1 {
+    text-transform: uppercase;
+    margin-left: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: #616161 !important;
+    font-weight: 400;
+}
+.sub-header-2 {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.mat-card-left-section {
+    padding: 16px; 
+    color: rgba(255, 255, 255, 0.7) !important;
+    z-index: 1;
+}
+.mat-card-right-section {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.no-margin {
+    margin: 0
+}
+.mat-card-subheading-2 {
+    font: 400 16px/28px Roboto, "Helvetica Neue", sans-serif;
+    margin: 0 0 16px;
+}

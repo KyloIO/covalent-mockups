@@ -6,7 +6,6 @@ import { CategoriesComponent } from './categories/categories.component';
 
 const routes: Routes = [{
     path: '',
-    // component: FeedsComponent
     children: [{
       path: '',
       component: FeedsComponent,
