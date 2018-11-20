@@ -1,0 +1,50 @@
+<mat-toolbar color="none">
+    <mat-toolbar-row>
+      <div flex layout="row" layout-align="start center">
+        <mat-icon class="push-left-sm push-right">dashboard</mat-icon>
+        <span id="overview" class="push-left-xs">CATEGORIES</span>
+        <span flex></span>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+    <div layout-gt-xs="row" layout-align-gt-xs="center center">
+      <div flex-gt-xs="80">
+        <div id="recent-apps" layout="column">
+          <div layout="row" layout-wrap>
+            <ng-template let-app let-index="index" ngFor [ngForOf]="[0,1,2,3,4,5,6,7,8,9]">
+              <div flex-gt-xs="25" flex-xs="50">
+                <mat-card href class="mat-card-colored recent-apps">
+                  <ng-template tdLoading
+                                [tdLoadingUntil]="!app.loading"
+                                tdLoadingStrategy="overlay"
+                                tdLoadingType="linear">
+                    <div layout="row">
+                      <div class="pad border-radius-top-left border-radius-bottom-left tc-white bgc-orange" layout="column" layout-align="center center">
+                        <mat-icon class="text-30">edit</mat-icon>
+                      </div>
+                      <div flex class="text-truncate relative">
+                        <div layout="column" layout-padding class="text-truncate card-content-sm">
+                          <div class="mat-subheading-2 text-truncate push-none" [matTooltip]="app.name" matTooltipShowDelay="1000">category name</div>
+                          <div class="mat-caption tc-grey-600 text-truncate" title="Category description"> category description </div>
+                        </div>
+                        <mat-divider></mat-divider>
+                        <div layout="row" layout-align="end center">
+                          <button mat-icon-button>
+                            <mat-icon><span class="tc-grey-600">edit</span></mat-icon>
+                          </button>
+                          <button mat-icon-button>
+                            <mat-icon class="tc-grey-600">favorite</mat-icon>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </ng-template>
+                </mat-card>
+              </div>
+            </ng-template>
+          </div>
+
+        </div>
+
+      </div>
+    </div>

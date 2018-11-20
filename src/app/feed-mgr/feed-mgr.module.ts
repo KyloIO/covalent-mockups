@@ -25,7 +25,7 @@ import { CovalentLoadingModule } from '@covalent/core/loading';
 import { CovalentDataTableModule } from '@covalent/core/data-table';
 
 import { FeedsComponent } from './feeds/feeds.component';
-
+import { CategoriesComponent } from './categories/categories.component';
 import { userRoutes } from './feed-mgr.routes';
 
 import { USER_PROVIDER, USERS_API } from './services/feed-mgr.service';
@@ -33,6 +33,7 @@ import { KyloCommonModule } from '../common.module';
 @NgModule({
   declarations: [
     FeedsComponent,
+    CategoriesComponent
   ], // directives, components, and pipes owned by this NgModule
   imports: [
     // angular modules
