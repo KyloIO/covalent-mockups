@@ -1,19 +1,71 @@
-.kylo-app-search-box-container .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label,.kylo-app-search-box-container .mat-form-field-empty.mat-form-field-label {
-    top: 10px;
+$search-box-height: 35px;
+$search-box-width: 100%;
+
+@mixin display() {
+    display: inline-flex;
 }
-.kylo-app-search-box-container .mat-form-field-appearance-legacy .mat-form-field-infix {
-    height: 35px;
+
+@mixin no-border-padding() {
     border: 0;
     padding: 0;
 }
-.kylo-app-search-box-container .mat-form-field-prefix, .kylo-app-search-box-container .mat-form-field-suffix {
-    vertical-align: top;
-    display: inline-block;
+
+.toolbar-icons {
+    width: 40px; 
+    height:40px; 
+    margin: 0 6px 0 6px;
 }
-.kylo-app-search-box-container .mat-form-field-appearance-legacy .mat-form-field-label{
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 17px;
+
+.toolbar-icons-container {
+    @include display();
 }
-.kylo-app-search-box-container .mat-form-field-appearance-legacy .mat-form-field-wrapper{
-    padding-bottom: 0 !important;
+.kylo-app-search-box-container {
+    
+    @include display();
+    width: $search-box-width;
+
+    .mat-form-field-appearance-legacy {
+        .mat-form-field-infix {
+            @include display();
+            @include no-border-padding();
+            height: $search-box-height;
+            position: absolute;
+            width: calc(100% - 50px);
+            left: 50px;
+        }
+        
+        .mat-form-field-label{
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 17px;
+            padding-top: 5px;
+        }
+        .mat-form-field-wrapper, 
+        .mat-form-field-flex {
+            @include no-border-padding();
+            height: $search-box-height;
+        }
+        .mat-form-field-underline,
+        .mat-focused .mat-form-field-underline {
+            display: none;
+        }
+    }
+
+    .td-search-box {
+        background-color: #899296; 
+        height: $search-box-height; 
+        border-radius: 2px;
+
+        &.td-search-active {
+            background-color: white;
+            color: rgba(black, 0.87);
+        }
+    }
+    .kylo-search-icon {
+        padding: 6px; 
+        font-size: 120%;
+    }
+    .kylo-close-search-icon {
+        vertical-align: middle;
+        margin-left: 10px;
+    }
 }
