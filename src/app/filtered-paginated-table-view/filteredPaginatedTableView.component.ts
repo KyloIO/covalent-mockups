@@ -6,7 +6,7 @@ import {IPageChangeEvent} from "@covalent/core/paging";
     selector: 'filtered-paginated-table-view',
     templateUrl: './filteredPaginatedTableView.html',
     encapsulation : ViewEncapsulation.None,
-    styles : [`.td-search-input { overflow : hidden}`]
+    styles : [`.td-search-input { overflow : hidden; width:100%}`]
 })
 export class FilteredPaginatedTableViewComponent implements AfterViewInit {
 

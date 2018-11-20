@@ -664,7 +664,7 @@ $mat-font-url: '../node_modules/@covalent/core/common/styles/font/';
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
 $primary: mat-palette($td-slate, 700, 100, 900);
-$accent:  mat-palette($td-teal, 800, 100, 900);
+$accent:  mat-palette($td-orange, 800, 100, 900);
 $warn:    mat-palette($mat-deep-orange, 800, 100, 900);
 
 // Create the theme object (a Sass map containing all of the palettes).

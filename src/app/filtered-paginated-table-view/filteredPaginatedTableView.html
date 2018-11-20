@@ -2,9 +2,9 @@
         <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
         <div *ngIf="!loading" class="flex-container" fxLayoutAlign="center center">
             <mat-card class="push-bottom-none" tdMediaToggle="gt-xs" [mediaClasses]="['push']" style="color: rgba(0, 0, 0, 0.60);">
-                <mat-card-title *ngIf="showToolbar"  layout="row" layout-align="start center" flex>
+                <mat-card-title *ngIf="showToolbar"  layout="row" layout-align="start center" flex style="padding-top: 6px">
                         <mat-icon style="vertical-align: middle; display: inline-flex;" flex="10">search</mat-icon>
-                        <td-search-input flex style="display: inline-flex; max-height: 50px; font-size: 20px; margin-left:15px;" #searchBox placeholder="Filter" (searchDebounce)="search($event)" searchIcon="">
+                        <td-search-input flex style="display: inline-flex; max-height: 50px; font-size: 17px; margin-left:15px;width:calc(100% - 39px)" #searchBox placeholder="Filter by name or description" (searchDebounce)="search($event)" searchIcon="">
                         </td-search-input>
                         <mat-divider></mat-divider>
                 </mat-card-title>
