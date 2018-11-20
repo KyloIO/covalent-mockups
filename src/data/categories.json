@@ -1,498 +1,76 @@
 [
   {
-    "name": "bot-app-1542693785167",
-    "ephemeral": false,
-    "cpus": 0.1,
-    "memory": 600,
+    "name": "feed-cat-1542693785167",
     "icon": "new_releases",
     "color": "deep-purple-800",
-    "owners": {
-      "users": [
-        "user1"
-      ],
-      "groups": []
-    },
-    "collaborators": {
-      "users": [],
-      "groups": []
-    },
-    "app_id": "3724e35a-5e6a-4f44-9797-bee3685e94ab",
-    "app_type": "custom",
-    "installed_by": "user1",
-    "install_time": "2018-11-20T06:03:19.406Z",
-    "last_updated_by": "user1",
-    "last_updated_time": "2018-11-20T06:03:19.406Z",
-    "public": true,
-    "tag_names": [],
-    "app_state": "created",
-    "favorite": true,
-    "versions": {}
+    "favorite": true
+    
   },
   {
-    "name": "API-test-enwQh",
-    "ephemeral": true,
-    "cpus": 0.5,
-    "memory": 600,
+    "name": "feed-cat-test-enwQh",
     "icon": "android",
     "color": "orange-800",
-    "owners": {
-      "users": [
-        "user1"
-      ],
-      "groups": []
-    },
-    "collaborators": {
-      "users": [],
-      "groups": []
-    },
-    "app_id": "320fcf73-7d85-435d-972b-6550b34d5346",
-    "app_type": "custom",
-    "description": "",
-    "config": {
-      "PATH": {
-        "type": "text",
-        "required": false,
-        "default": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/jdk/bin"
-      },
-      "JAVA_JCE": {
-        "type": "text",
-        "required": false,
-        "default": "standard"
-      },
-      "JAVA_VERSION_MAJOR": {
-        "type": "text",
-        "required": false,
-        "default": "8"
-      },
-      "JAVA_HOME": {
-        "type": "text",
-        "required": false,
-        "default": "/opt/jdk"
-      },
-      "TESTOUTDIR": {
-        "type": "text",
-        "required": false,
-        "default": "/tmp"
-      },
-      "JAVA_VERSION_MINOR": {
-        "type": "text",
-        "required": false,
-        "default": "144"
-      },
-      "GLIBC_VERSION": {
-        "type": "text",
-        "required": false,
-        "default": "2.23-r3"
-      },
-      "LANG": {
-        "type": "text",
-        "required": false,
-        "default": "C.UTF-8"
-      },
-      "JAVA_VERSION_BUILD": {
-        "type": "text",
-        "required": false,
-        "default": "01"
-      },
-      "JAVA_PACKAGE": {
-        "type": "text",
-        "required": false,
-        "default": "server-jre"
-      }
-    },
-    "installed_by": "user1",
-    "install_time": "2018-11-20T05:28:43.650Z",
-    "last_updated_by": "user1",
-    "last_updated_time": "2018-11-20T05:28:46.022Z",
-    "public": true,
-    "last_version_status": "succeeded",
-    "tag_names": [],
-    "app_state": "executable",
-    "favorite": false,
-    "versions": {
-      "v1": {
-        "sha": "sha256:88299de682fb16d9f3fcc1b72af21dbdb8a0ce535e0aa89f4c843046b925e170",
-        "registry": "quay.ac.uda.io",
-        "image": "appcenter_automation_apps/consumer-complaints:1.0"
-      }
-    }
+    "favorite": false
   },
   {
-    "name": "bot-app-1542681593174",
-    "ephemeral": false,
-    "cpus": 0.1,
-    "memory": 600,
+    "name": "feed-cat-1542681593174",
     "icon": "vertical_align_center",
     "color": "amber-600",
-    "owners": {
-      "users": [
-        "user1"
-      ],
-      "groups": []
-    },
-    "collaborators": {
-      "users": [],
-      "groups": []
-    },
-    "app_id": "0fc76d52-cfbb-4b81-a0ed-cbf56a35df31",
-    "app_type": "custom",
-    "config": {
-      "PATH": {
-        "type": "text",
-        "required": false,
-        "default": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      },
-      "NJS_VERSION": {
-        "type": "text",
-        "required": false,
-        "default": "1.13.1.0.1.10-1~stretch"
-      },
-      "NGINX_VERSION": {
-        "type": "text",
-        "required": false,
-        "default": "1.13.1-1~stretch"
-      }
-    },
-    "installed_by": "user1",
-    "install_time": "2018-11-20T02:40:16.685Z",
-    "last_updated_by": "user1",
-    "last_updated_time": "2018-11-20T02:41:28.057Z",
-    "public": true,
-    "last_version_status": "succeeded",
-    "tag_names": [],
-    "app_state": "executable",
-    "favorite": false,
-    "versions": {
-      "v1": {
-        "sha": "sha256:8d8337966a5219119ab3903cfc12751b9531e413fb1b05e53c7b49516a6e4023",
-        "registry": "quay.ac.uda.io",
-        "image": "appcenter_apps/nginx:latest",
-        "containerPort": "80",
-        "exposedPorts": [
-          "80"
-        ]
-      }
-    },
-    "access_url": "https://bot-app-1542681593174.appcenter.integ.ac.uda.io"
+    "favorite": false
   },
   {
-    "name": "fav-app-1542681081357",
-    "ephemeral": false,
-    "cpus": 0.1,
-    "memory": 600,
+    "name": "feed-cat-1542681081357",
     "icon": "keyboard_backspace",
     "color": "deep-purple-900",
-    "owners": {
-      "users": [
-        "user1"
-      ],
-      "groups": []
-    },
-    "collaborators": {
-      "users": [],
-      "groups": []
-    },
-    "app_id": "21d60dde-456e-4ada-a68e-ee4d4e131052",
-    "app_type": "custom",
-    "installed_by": "user1",
-    "install_time": "2018-11-20T02:31:45.184Z",
-    "last_updated_by": "user1",
-    "last_updated_time": "2018-11-20T02:31:45.184Z",
-    "public": true,
-    "tag_names": [],
-    "app_state": "created",
-    "favorite": true,
-    "versions": {}
+    "favorite": true
+    
   },
   {
-    "name": "app-develop-fav-1542680546760",
-    "ephemeral": false,
-    "cpus": 0.1,
-    "memory": 600,
+    "name": "feed-cat-1542680546760",
     "icon": "nfc",
     "color": "brown-900",
-    "owners": {
-      "users": [
-        "user1"
-      ],
-      "groups": []
-    },
-    "collaborators": {
-      "users": [],
-      "groups": []
-    },
-    "app_id": "7f0a07a6-25fb-475a-b222-b5a3c4b7fc90",
-    "app_type": "custom",
-    "installed_by": "user1",
-    "install_time": "2018-11-20T02:22:42.894Z",
-    "last_updated_by": "user1",
-    "last_updated_time": "2018-11-20T02:23:51.891Z",
-    "public": true,
-    "tag_names": [],
-    "app_state": "created",
-    "favorite": false,
-    "versions": {}
+    "favorite": false
   },
   {
-    "name": "app-develop-fav-1542680376690",
-    "ephemeral": false,
-    "cpus": 0.1,
-    "memory": 600,
+    "name": "feed-cat-1542680376690",
     "icon": "tag_faces",
     "color": "deep-orange-900",
-    "owners": {
-      "users": [
-        "user1"
-      ],
-      "groups": []
-    },
-    "collaborators": {
-      "users": [],
-      "groups": []
-    },
-    "app_id": "733e40a5-db40-4a02-bf24-7aaefbce0cc9",
-    "app_type": "custom",
-    "installed_by": "user1",
-    "install_time": "2018-11-20T02:19:52.815Z",
-    "last_updated_by": "user1",
-    "last_updated_time": "2018-11-20T02:21:12.092Z",
-    "public": true,
-    "tag_names": [],
-    "app_state": "created",
-    "favorite": false,
-    "versions": {}
+    "favorite": false
   },
   {
-    "name": "00browse-fav-app-1542348609319",
-    "ephemeral": false,
-    "cpus": 0.1,
-    "memory": 600,
+    "name": "feed-cat-1542348609319",
     "icon": "mic_none",
     "color": "cyan-600",
-    "owners": {
-      "users": [
-        "user1"
-      ],
-      "groups": []
-    },
-    "collaborators": {
-      "users": [],
-      "groups": []
-    },
-    "app_id": "3ab51bef-fd26-474c-a15f-3dfe0935332c",
-    "app_type": "custom",
-    "installed_by": "user1",
-    "install_time": "2018-11-16T06:10:23.386Z",
-    "last_updated_by": "user1",
-    "last_updated_time": "2018-11-20T02:18:22.304Z",
-    "public": true,
-    "tag_names": [],
-    "app_state": "created",
-    "favorite": false,
-    "versions": {}
+    "favorite": false
   },
   {
-    "name": "00browse-fav-app-1542680208979",
-    "ephemeral": false,
-    "cpus": 0.1,
-    "memory": 600,
+    "name": "feed-cat-1542680208979",
     "icon": "keyboard_arrow_up",
     "color": "deep-orange-600",
-    "owners": {
-      "users": [
-        "user1"
-      ],
-      "groups": []
-    },
-    "collaborators": {
-      "users": [],
-      "groups": []
-    },
-    "app_id": "b9a9b59d-82e9-4872-9122-06e09cceafa4",
-    "app_type": "custom",
-    "installed_by": "user1",
-    "install_time": "2018-11-20T02:17:11.711Z",
-    "last_updated_by": "user1",
-    "last_updated_time": "2018-11-20T02:17:11.711Z",
-    "public": true,
-    "tag_names": [],
-    "app_state": "created",
-    "favorite": false,
-    "versions": {}
+    "favorite": false
   },
   {
-    "name": "browse-fav-app-1542680057917",
-    "ephemeral": false,
-    "cpus": 0.1,
-    "memory": 600,
+    "name": "feed-cat-1542680057917",
     "icon": "mic_off",
     "color": "purple-600",
-    "owners": {
-      "users": [
-        "user1"
-      ],
-      "groups": []
-    },
-    "collaborators": {
-      "users": [],
-      "groups": []
-    },
-    "app_id": "087f9d67-3615-4ce5-8299-9d5ce6d4f2d0",
-    "app_type": "custom",
-    "installed_by": "user1",
-    "install_time": "2018-11-20T02:14:40.784Z",
-    "last_updated_by": "user1",
-    "last_updated_time": "2018-11-20T02:14:40.784Z",
-    "public": true,
-    "tag_names": [],
-    "app_state": "created",
-    "favorite": false,
-    "versions": {}
+    "favorite": false
   },
   {
-    "name": "bot-app-1542679804973",
-    "ephemeral": false,
-    "cpus": 0.1,
-    "memory": 600,
+    "name": "feed-cat-1542679804973",
     "icon": "wb_iridescent",
     "color": "indigo-800",
-    "owners": {
-      "users": [
-        "user1"
-      ],
-      "groups": []
-    },
-    "collaborators": {
-      "users": [],
-      "groups": []
-    },
-    "app_id": "498d6557-292c-4550-a52f-28ef62ed40dc",
-    "app_type": "custom",
-    "description": "1. ",
-    "config": {
-      "PATH": {
-        "type": "text",
-        "required": false,
-        "default": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      },
-      "NJS_VERSION": {
-        "type": "text",
-        "required": false,
-        "default": "1.13.1.0.1.10-1~stretch"
-      },
-      "NGINX_VERSION": {
-        "type": "text",
-        "required": false,
-        "default": "1.13.1-1~stretch"
-      }
-    },
-    "installed_by": "user1",
-    "install_time": "2018-11-20T02:10:28.143Z",
-    "last_updated_by": "user1",
-    "last_updated_time": "2018-11-20T02:11:53.891Z",
-    "public": true,
-    "last_version_status": "succeeded",
-    "tag_names": [],
-    "app_state": "executable",
-    "favorite": false,
-    "versions": {
-      "v1": {
-        "sha": "sha256:8d8337966a5219119ab3903cfc12751b9531e413fb1b05e53c7b49516a6e4023",
-        "registry": "quay.ac.uda.io",
-        "image": "appcenter_apps/nginx:latest",
-        "containerPort": "80",
-        "exposedPorts": [
-          "80"
-        ]
-      }
-    },
-    "access_url": "https://bot-app-1542679804973.appcenter.integ.ac.uda.io"
+    "favorite": false
   },
   {
-    "name": "bot-app-1542672023353",
-    "ephemeral": false,
-    "cpus": 0.1,
-    "memory": 600,
+    "name": "feed-cat-1542672023353",
     "icon": "border_inner",
     "color": "blue-grey-600",
-    "owners": {
-      "users": [
-        "user1"
-      ],
-      "groups": []
-    },
-    "collaborators": {
-      "users": [],
-      "groups": []
-    },
-    "app_id": "235ac847-f76f-4a86-9b07-43411e86bea1",
-    "app_type": "custom",
-    "config": {
-      "PATH": {
-        "type": "text",
-        "required": false,
-        "default": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      },
-      "NJS_VERSION": {
-        "type": "text",
-        "required": false,
-        "default": "1.13.1.0.1.10-1~stretch"
-      },
-      "NGINX_VERSION": {
-        "type": "text",
-        "required": false,
-        "default": "1.13.1-1~stretch"
-      }
-    },
-    "installed_by": "user1",
-    "install_time": "2018-11-20T00:00:57.278Z",
-    "last_updated_by": "user1",
-    "last_updated_time": "2018-11-20T00:02:50.798Z",
-    "public": true,
-    "last_version_status": "succeeded",
-    "tag_names": [],
-    "app_state": "executable",
-    "favorite": false,
-    "versions": {
-      "v1": {
-        "sha": "sha256:8d8337966a5219119ab3903cfc12751b9531e413fb1b05e53c7b49516a6e4023",
-        "registry": "quay.ac.uda.io",
-        "image": "appcenter_apps/nginx:latest",
-        "containerPort": "80",
-        "exposedPorts": [
-          "80"
-        ]
-      }
-    },
-    "access_url": "https://bot-app-1542672023353.appcenter.integ.ac.uda.io"
+    "favorite": false
   },
   {
-    "name": "bot-app-1542671352169",
-    "ephemeral": false,
-    "cpus": 0.1,
-    "memory": 600,
+    "name": "feed-cat-1542671352169",
     "icon": "colorize",
     "color": "orange-600",
-    "owners": {
-      "users": [
-        "user1"
-      ],
-      "groups": []
-    },
-    "collaborators": {
-      "users": [],
-      "groups": []
-    },
-    "app_id": "72625978-5b68-40f8-8da1-737fd4b44a33",
-    "app_type": "custom",
-    "installed_by": "user1",
-    "install_time": "2018-11-19T23:49:26.873Z",
-    "last_updated_by": "user1",
-    "last_updated_time": "2018-11-19T23:49:26.873Z",
-    "public": true,
-    "tag_names": [],
-    "app_state": "created",
-    "favorite": false,
-    "versions": {}
+    "favorite": false
   }
 ]
