@@ -1,10 +1,12 @@
-import {AfterViewInit, Component, ContentChildren, Input, QueryList, ViewChild, Output, EventEmitter} from "@angular/core";
+import {AfterViewInit, Component, ContentChildren, Input, QueryList, ViewChild, Output, EventEmitter, ViewEncapsulation} from "@angular/core";
 import {ITdDataTableColumn, ITdDataTableSortChangeEvent, TdDataTableComponent, TdDataTableSortingOrder, TdDataTableTemplateDirective} from "@covalent/core/data-table";
 import {IPageChangeEvent} from "@covalent/core/paging";
 
 @Component({
     selector: 'filtered-paginated-table-view',
-    templateUrl: './filteredPaginatedTableView.html'
+    templateUrl: './filteredPaginatedTableView.html',
+    encapsulation : ViewEncapsulation.None,
+    styles : [`.td-search-input { overflow : hidden}`]
 })
 export class FilteredPaginatedTableViewComponent implements AfterViewInit {
 
