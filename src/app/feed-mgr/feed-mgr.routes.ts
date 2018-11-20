@@ -11,6 +11,10 @@ const routes: Routes = [{
       component: FeedsComponent,
     },
     {
+      path: 'feeds',
+      component: FeedsComponent,
+    },
+    {
       path: 'categories',
       component: CategoriesComponent,
     }

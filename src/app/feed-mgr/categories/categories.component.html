@@ -1,7 +1,9 @@
 <mat-toolbar style="margin-bottom: 25px;">
     <mat-toolbar-row>
       <div flex layout="row" layout-align="start center">
-        <mat-icon style="margin-right: 16px;">folder_special</mat-icon>
+        <button mat-icon-button td-menu-button [tdLayoutToggle]="true">
+          <mat-icon>menu</mat-icon>
+        </button>
         <span id="overview">CATEGORIES</span>
         <span flex></span>
         <mat-icon>help</mat-icon>

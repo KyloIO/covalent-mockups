@@ -10,7 +10,7 @@ export class MainComponent {
 
   routes: Object[] = [{
       title: 'Feed Manager',
-      route: '/',
+      route: '/feeds',
       icon: 'linear_scale',
     }, {
       title: 'Operations',

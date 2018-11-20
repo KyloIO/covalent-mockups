@@ -39,12 +39,6 @@ export class FeedsComponent  extends BaseFilteredPaginatedTableView implements O
     this.load();
   }
 
-  // filterUsers(displayName: string = ''): void {
-  //   this.filteredUsers = this.users.filter((user: IUser) => {
-  //     return user.displayName.toLowerCase().indexOf(displayName.toLowerCase()) > -1;
-  //   });
-  // }
-
   async load(): Promise<void> {
     try {
       this._loadingService.register('users.list');
@@ -58,33 +52,4 @@ export class FeedsComponent  extends BaseFilteredPaginatedTableView implements O
     super.setDataAndColumnSchema(this.users,this.columns);
     super.filter();
   }
-
-  // delete(id: string): void {
-  //   this._dialogService
-  //     .openConfirm({ message: 'Are you sure you want to delete this user?' })
-  //     .afterClosed().toPromise().then((confirm: boolean) => {
-  //       if (confirm) {
-  //         this._delete(id);
-  //       }
-  //     });
-  // }
-
-  // private async _delete(id: string): Promise<void> {
-  //   try {
-  //     this._loadingService.register('users.list');
-  //     await this._userService.delete(id).toPromise();
-  //     this.users = this.users.filter((user: IUser) => {
-  //       return user.id !== id;
-  //     });
-  //     this.filteredUsers = this.filteredUsers.filter((user: IUser) => {
-  //       return user.id !== id;
-  //     });
-  //     this._snackBarService.open('User Deleted', 'Ok');
-  //   } catch (error) {
-  //     this._dialogService.openAlert({ message: 'There was an error trying to delete the user' });
-  //   } finally {
-  //     this._loadingService.resolve('users.list');
-  //   }
-  // }
-
 }
