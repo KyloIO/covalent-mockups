@@ -2,7 +2,7 @@
     <mat-toolbar-row>
       <div flex layout="row" layout-align="start center">
         <mat-icon style="margin-right: 16px;">folder_special</mat-icon>
-        <span id="overview">CATEGORIES</span>
+        <span>CATEGORIES</span>
         <span flex></span>
         <mat-icon>help</mat-icon>
       </div>
@@ -22,10 +22,6 @@
             <ng-template let-app let-index="index" ngFor [ngForOf]="apps">
               <div flex-gt-xs="25" flex-xs="50">
                 <mat-card href class="mat-card-colored">
-                  <ng-template tdLoading
-                                [tdLoadingUntil]="!app.loading"
-                                tdLoadingStrategy="overlay"
-                                tdLoadingType="linear">
                     <div layout="row">
                       <div [ngClass]="'tc-white bgc-' + app?.color" class="mat-card-left-section" layout="column" layout-align="center center">
                         <mat-icon class="text-30">{{app.icon}}</mat-icon>
@@ -46,13 +42,10 @@
                         </div>
                       </div>
                     </div>
-                  </ng-template>
                 </mat-card>
               </div>
             </ng-template>
           </div>
-
         </div>
-
       </div>
     </div>
