@@ -3,7 +3,10 @@
     [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '257px' : '100%'">
     <mat-toolbar td-sidenav-content>
       <mat-toolbar-row>
-        <mat-icon>linear_scale</mat-icon>
+        <!-- <mat-icon>linear_scale</mat-icon> -->
+        <button mat-icon-button td-menu-button [tdLayoutToggle]="true">
+          <mat-icon>menu</mat-icon>
+      </button>
         <span style="padding-left:10px">Feeds</span>
       </mat-toolbar-row>
     </mat-toolbar>
@@ -12,7 +15,7 @@
         <mat-icon matListIcon>linear_scale</mat-icon>
         Feeds
       </a>
-      <a mat-list-item [routerLink]="['categories']">
+      <a mat-list-item [routerLink]="['../categories']">
         <mat-icon matListIcon>folder_special</mat-icon>
         Categories
       </a>

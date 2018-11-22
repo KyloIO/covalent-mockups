@@ -9,16 +9,19 @@ const routes: Routes = [{
     component: LoginComponent,
   }, {
     path: '',
-    // component: MainComponent,
-    redirectTo : '/feeds',
-    pathMatch : 'full',
-    // children: [
-    //   // ,
-    // ],
-  },{
-    path: 'feeds',
-    loadChildren: './feed-mgr/feed-mgr.module#FeedMgrModule',
+    component : MainComponent,
+    children: [{
+        path: '',
+        loadChildren: './feed-mgr/feed-mgr.module#FeedMgrModule'
+      }
+    ],
   }
+    // redirectTo : '/feeds',
+    // pathMatch : 'full',
+  // },{
+  //   path : 'ops',
+  //   loadChildren: './ops/ops.module#OPSModule',
+  // }
 ];
 
 export const appRoutes: any = RouterModule.forRoot(routes);
