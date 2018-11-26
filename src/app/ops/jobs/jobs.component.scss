@@ -13,3 +13,10 @@
 .td-data-table-cell-content-wrapper:first-child{
     padding-left: 18px !important;
 }
+table[td-data-table] .td-data-table-column:first-child {
+    background-image: url('../../../assets/images/list.png');
+    background-size: 39px;
+    background-repeat: no-repeat;
+    background-position-y: 13px;
+    background-position-x: 12px;
+}
