@@ -3,6 +3,7 @@
     [opened]="media.registerQuery('gt-sm') | async" 
     [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'push'"
     [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '257px' : '100%'"
+    class="operations-jobs"
   >
   <mat-toolbar td-sidenav-content>
     <mat-toolbar-row>
@@ -62,11 +63,18 @@
       >
       <ng-template tdDataTableTemplate="state" let-value="value" let-row="row" let-column="column">
         <div layout="row">
-          <mat-icon matListAvatar  *ngIf="value == 'running'" style="color : #43a047 !important">fast_forward</mat-icon>
-          <mat-icon matListAvatar  *ngIf="value == 'scheduled'" style="color : #43a047 !important">schedule</mat-icon>
-          <mat-icon matListAvatar  *ngIf="value == 'waiting'" style="color: #f3753f !important;">rowing</mat-icon>
-          <mat-icon matListAvatar  *ngIf="value == 'executed'" style="color: #fb8c00 !important;">remove_circle_outline</mat-icon>
+          <mat-icon matListAvatar *ngIf="value == 'running'" class="image-shadow" style="color : #43a047 !important">fast_forward</mat-icon>
+          <mat-icon matListAvatar *ngIf="value == 'scheduled'" class="image-shadow" style="color : #43a047 !important">schedule</mat-icon>
+          <mat-icon matListAvatar *ngIf="value == 'waiting'" class="image-shadow" style="color: #f3753f !important;">rowing</mat-icon>
+          <mat-icon matListAvatar *ngIf="value == 'executed'" class="image-shadow" style="color: #fb8c00 !important;">remove_circle_outline</mat-icon>
         </div>
     </ng-template>
+    <ng-template tdDataTableTemplate="jobName" let-value="value" let-row="row" let-column="column">
+      <div>{{row.jobName}}</div>
+      <div *ngIf="row.state == 'running'" style="color : #43a047 !important">{{row.description}}</div>
+      <div *ngIf="row.state == 'scheduled'" style="color : #43a047 !important">{{row.description}}</div>
+      <div *ngIf="row.state == 'waiting'" style="color : #f3753f !important">{{row.description}}</div>
+      <div *ngIf="row.state == 'executed'" style="color : #fb8c00 !important">{{row.description}}</div>
+  </ng-template>
   </filtered-paginated-table-view>
 </td-layout-manage-list>

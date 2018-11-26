@@ -5,6 +5,7 @@
     border-bottom: 1px;
     border-bottom-color: rgba(0, 0, 0, 0.12);
     border-bottom-style: solid;
+    height: 70px;
 }
 .td-data-table-row, .td-data-table-cell:first-child, .td-data-table-row:last-child .td-data-table-cell{
     border-bottom: 0px !important;
@@ -13,10 +14,24 @@
 .td-data-table-cell-content-wrapper:first-child{
     padding-left: 18px !important;
 }
-table[td-data-table] .td-data-table-column:first-child {
+.operations-jobs table[td-data-table] .td-data-table-column:first-child {
     background-image: url('../../../assets/images/list.png');
     background-size: 39px;
     background-repeat: no-repeat;
     background-position-y: 13px;
     background-position-x: 12px;
+}
+
+td.td-data-table-cell>div {
+    display: block !important;
+}
+
+.image-shadow {
+    background-color: #f1efef;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #f1efef;
+}
+
+mat-nav-list [mat-list-item].active>div {
+    color: #f3753f;
 }
