@@ -69,6 +69,9 @@ export class BaseFilteredPaginatedTableView {
                 return column.name;
             });
         newData = this._dataTableService.filterData(newData, this.searchTerm, true, excludedColumns);
+        if(newData == undefined){
+            newData = [];
+        }
         this.filteredTotal = newData.length;
         newData = this._dataTableService.sortData(newData, this.sortBy, this.sortOrder);
         newData = this._dataTableService.pageData(newData, this.fromRow, this.currentPage * this.pageSize);

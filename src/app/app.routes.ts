@@ -13,6 +13,9 @@ const routes: Routes = [{
     children: [{
         path: '',
         loadChildren: './feed-mgr/feed-mgr.module#FeedMgrModule'
+      },{
+        path: 'ops',
+        loadChildren: './ops/ops.module#OpsModule'
       }
     ],
   }

@@ -14,7 +14,7 @@ export class MainComponent {
       icon: 'linear_scale',
     }, {
       title: 'Operations',
-      route: '/',
+      route: '/ops',
       icon: 'dashboard',
     },
     {

@@ -1,0 +1,61 @@
+
+  <td-layout-manage-list [opened]="media.registerQuery('gt-sm') | async" [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'push'"
+  [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '257px' : '100%'">
+  <mat-toolbar td-sidenav-content>
+    <mat-toolbar-row>
+      <!-- <mat-icon>linear_scale</mat-icon> -->
+      <button mat-icon-button td-menu-button [tdLayoutToggle]="true">
+        <mat-icon>menu</mat-icon>
+    </button>
+      <span style="padding-left:10px">Jobs</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-nav-list td-sidenav-content [tdLayoutManageListClose]="!media.query('gt-sm')">
+    <a mat-list-item>
+      <mat-icon matListIcon>dashboard</mat-icon>
+      All Jobs
+    </a>
+    <a mat-list-item>
+      <mat-icon matListIcon>linear_scale</mat-icon>
+      Finished Jobs
+    </a>
+    <a mat-list-item>
+      <mat-icon matListIcon>beenhere</mat-icon>
+      Running Jobs
+    </a>
+    <a mat-list-item>
+      <mat-icon matListIcon>transform</mat-icon>
+      Aborted Jobs
+    </a>
+    <a mat-list-item>
+      <mat-icon matListIcon>grid_on</mat-icon>
+      Failed Jobs
+    </a>
+  </mat-nav-list>
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <div td-toolbar-content layout="row" layout-align="start center" flex>
+        <span>Jobs</span>
+        <span flex></span>
+        <a id="create-app" mat-raised-button color="accent" class="text-upper">CREATE</a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <filtered-paginated-table-view      
+      [filteredData]="filteredData"
+      [columns]="columns"
+      [clickable]="true"
+      [sortable]="true"
+      [sortOrder]="'DESC'"
+      [sortBy]="sortBy"
+      [firstLast]="false"
+      [pageSize]="pageSize"
+      [filteredTotal]="filteredTotal"
+      (rowClicked)="groupDetails($event)"
+      (sortChanged)="sort($event)"
+      (searchDebounced)="search($event)"
+      (pageSizeChanged)="onPageSizeChange($event)"
+      [allowedPageSize]="[5,10,20,50]"
+      >
+  </filtered-paginated-table-view>
+</td-layout-manage-list>

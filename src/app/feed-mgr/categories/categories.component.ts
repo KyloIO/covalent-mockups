@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
 
 @Component({
     selector: 'qs-categories',
@@ -23,7 +22,7 @@ export class CategoriesComponent {
         });
     }
 
-    getCategories(): Observable<any> {
+    getCategories(): any {
         return this.http.get("data/categories.json");
     }
 
