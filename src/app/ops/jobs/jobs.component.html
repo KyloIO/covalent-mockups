@@ -1,43 +1,45 @@
 
-  <td-layout-manage-list [opened]="media.registerQuery('gt-sm') | async" [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'push'"
-  [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '257px' : '100%'">
+  <td-layout-manage-list #manageList
+    [opened]="media.registerQuery('gt-sm') | async" 
+    [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'push'"
+    [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '257px' : '100%'"
+  >
   <mat-toolbar td-sidenav-content>
     <mat-toolbar-row>
       <!-- <mat-icon>linear_scale</mat-icon> -->
       <button mat-icon-button td-menu-button [tdLayoutToggle]="true">
         <mat-icon>menu</mat-icon>
     </button>
-      <span style="padding-left:10px">Jobs</span>
+      <span style="padding-left:10px; text-transform: capitalize">Jobs</span>
     </mat-toolbar-row>
   </mat-toolbar>
   <mat-nav-list td-sidenav-content [tdLayoutManageListClose]="!media.query('gt-sm')">
-    <a mat-list-item>
-      <mat-icon matListIcon>dashboard</mat-icon>
-      All Jobs
+    <a mat-list-item [class.active]="searchTerm == ''"  (click) = "selectFilter('')">
+      <mat-icon matListIcon>list</mat-icon>
+      All
     </a>
-    <a mat-list-item>
-      <mat-icon matListIcon>linear_scale</mat-icon>
-      Finished Jobs
+    <a mat-list-item [class.active]="searchTerm == 'executed'"  (click) = "selectFilter('executed')">
+      <mat-icon matListIcon>check_circle</mat-icon>
+      Executed
     </a>
-    <a mat-list-item>
-      <mat-icon matListIcon>beenhere</mat-icon>
-      Running Jobs
+    <a mat-list-item [class.active]="searchTerm == 'running'"  (click) = "selectFilter('running')">
+      <mat-icon matListIcon>fast_forward</mat-icon>
+      Running
     </a>
-    <a mat-list-item>
-      <mat-icon matListIcon>transform</mat-icon>
-      Aborted Jobs
+    <a mat-list-item [class.active]="searchTerm == 'scheduled'"  (click) = "selectFilter('scheduled')">
+      <mat-icon matListIcon>access_time</mat-icon>
+      Scheduled
     </a>
-    <a mat-list-item>
-      <mat-icon matListIcon>grid_on</mat-icon>
-      Failed Jobs
+    <a mat-list-item [class.active]="searchTerm == 'waiting'"  (click) = "selectFilter('waiting')">
+      <mat-icon matListIcon>more_horiz</mat-icon>
+      Waiting
     </a>
   </mat-nav-list>
   <mat-toolbar>
     <mat-toolbar-row>
       <div td-toolbar-content layout="row" layout-align="start center" flex>
-        <span>Jobs</span>
+        <span style="text-transform: capitalize">{{filterTerm}}</span>
         <span flex></span>
-        <a id="create-app" mat-raised-button color="accent" class="text-upper">CREATE</a>
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
@@ -56,6 +58,15 @@
       (searchDebounced)="search($event)"
       (pageSizeChanged)="onPageSizeChange($event)"
       [allowedPageSize]="[5,10,20,50]"
+      [showToolbar]="false"
       >
+      <ng-template tdDataTableTemplate="state" let-value="value" let-row="row" let-column="column">
+        <div layout="row">
+          <mat-icon matListAvatar  *ngIf="value == 'running'" style="color : #43a047 !important">fast_forward</mat-icon>
+          <mat-icon matListAvatar  *ngIf="value == 'scheduled'" style="color : #43a047 !important">schedule</mat-icon>
+          <mat-icon matListAvatar  *ngIf="value == 'waiting'" style="color: #f3753f !important;">rowing</mat-icon>
+          <mat-icon matListAvatar  *ngIf="value == 'executed'" style="color: #fb8c00 !important;">remove_circle_outline</mat-icon>
+        </div>
+    </ng-template>
   </filtered-paginated-table-view>
 </td-layout-manage-list>

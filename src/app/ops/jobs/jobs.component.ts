@@ -1,30 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 import { TdMediaService } from '@covalent/core/media';
 
 import { BaseFilteredPaginatedTableView } from '../../filtered-paginated-table-view/BaseFilteredPaginatedTableView';
 import { TdDataTableService, ITdDataTableColumn } from '@covalent/core/data-table';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'kylo-jobs',
   templateUrl: './jobs.component.html',
   styleUrls: ['./jobs.component.scss'],
+  encapsulation : ViewEncapsulation.None
 })
 export class JobsComponent  extends BaseFilteredPaginatedTableView implements OnInit{
 
-  users: any[];
+  jobs: any[];
+  filterTerm : string = 'All';
   public columns: ITdDataTableColumn[] = [
-    { name: 'execution', label: 'Execution', sortable: true, filter : true },
-    { name: 'owner', label: 'Owner', sortable: true, filter : true},
-    { name: 'staged', label: 'Type', sortable: true, filter : true },
+    { name: 'state', label :'', width : 60,sortable: false, filter: true },
+    { name: 'jobName', label: 'Job Name', sortable: true, filter: false },
+    { name: 'owner', label: 'Owner', sortable: true, filter: false},
+    { name: 'staged', label: 'Type', sortable: true, filter: false},
   ];
   
-  sortBy : string = 'displayName';
+  sortBy : string = 'jobName';
 
   constructor(private _titleService: Title,
     public media: TdMediaService,
-    public tdDataService : TdDataTableService) {
+    public tdDataService : TdDataTableService,
+    public http : HttpClient) {
       super(tdDataService);
   }
 
@@ -34,8 +39,16 @@ export class JobsComponent  extends BaseFilteredPaginatedTableView implements On
   }
 
   async load(): Promise<void> {
-    super.setSortBy('execution');
-    super.setDataAndColumnSchema(this.users,this.columns);
+    this.http.get("data/jobs.json").toPromise().then((jobs : any) => {
+      this.jobs = jobs;
+      super.setSortBy('jobName');
+      super.setDataAndColumnSchema(this.jobs,this.columns);
+      super.filter();
+    })
+  }
+  selectFilter(term : string) {
+    this.filterTerm = term ===''?'All' : term;
+    this.searchTerm = term;
     super.filter();
   }
 }

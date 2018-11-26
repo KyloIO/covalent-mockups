@@ -7,6 +7,7 @@ import { TdMediaService } from '@covalent/core/media';
 import { UserService, IUser } from '../services/feed-mgr.service';
 import { BaseFilteredPaginatedTableView } from '../../filtered-paginated-table-view/BaseFilteredPaginatedTableView';
 import { TdDataTableService, ITdDataTableColumn } from '@covalent/core/data-table';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'qs-users',
@@ -27,10 +28,9 @@ export class FeedsComponent  extends BaseFilteredPaginatedTableView implements O
   sortBy : string = 'displayName';
 
   constructor(private _titleService: Title,
-    private _loadingService: TdLoadingService,
-    private _userService: UserService,
     public media: TdMediaService,
-    public tdDataService : TdDataTableService) {
+    public tdDataService : TdDataTableService,
+    public _http : HttpClient) {
       super(tdDataService);
   }
 
@@ -40,16 +40,12 @@ export class FeedsComponent  extends BaseFilteredPaginatedTableView implements O
   }
 
   async load(): Promise<void> {
-    try {
-      this._loadingService.register('users.list');
-      this.users = await this._userService.query().toPromise();
-    } catch (error) {
-      this.users = await this._userService.staticQuery().toPromise();
-    } finally {
-      this._loadingService.resolve('users.list');
-    }
-    super.setSortBy('displayName');
-    super.setDataAndColumnSchema(this.users,this.columns);
-    super.filter();
+    this._http.get('data/users.json').toPromise().then((users :any) => {
+      this.users = users
+      super.setSortBy('displayName');
+      super.setDataAndColumnSchema(this.users,this.columns);
+      super.filter();
+    });
+    
   }
 }

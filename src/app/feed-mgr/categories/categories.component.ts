@@ -12,13 +12,11 @@ export class CategoriesComponent {
     apps: any = [];
 
     constructor(private http: HttpClient) {
-        console.log("Inside");
     }
 
     ngOnInit() {
         this.getCategories().subscribe(data => {
             this.apps = data;
-            console.log(data);
         });
     }
 

@@ -50,6 +50,7 @@ import { jobsRoute } from './ops.routes';
     MatInputModule,
     MatSlideToggleModule,
     MatMenuModule,
+    MatButtonModule,
     // covalent modules
     CovalentLoadingModule,
     CovalentDialogsModule,

@@ -20,6 +20,7 @@
               "src/assets",
               "src/config.js",
               "src/favicon.ico",
+              "src/data",
               {
                 "glob": "**/*",
                 "input": "node_modules/@covalent/code-editor/assets/monaco",

@@ -1,0 +1,15 @@
+.mat-card-content {
+    padding:  0 !important;
+}
+.td-data-table-cell {
+    border-bottom: 1px;
+    border-bottom-color: rgba(0, 0, 0, 0.12);
+    border-bottom-style: solid;
+}
+.td-data-table-row, .td-data-table-cell:first-child, .td-data-table-row:last-child .td-data-table-cell{
+    border-bottom: 0px !important;
+}
+
+.td-data-table-cell-content-wrapper:first-child{
+    padding-left: 18px !important;
+}
