@@ -1,0 +1,530 @@
+[
+    {
+        "owner": {
+            "displayName": "Data Lake Administrator",
+            "email": null,
+            "enabled": true,
+            "groups": [
+                "designers",
+                "admin",
+                "user"
+            ],
+            "systemName": "dladmin"
+        },
+        "allowedActions": {
+            "actions": [
+                {
+                    "systemName": "accessFeed",
+                    "actions": [
+                        {
+                            "systemName": "editFeedSummary"
+                        },
+                        {
+                            "systemName": "accessFeedDetails",
+                            "actions": [
+                                {
+                                    "systemName": "editFeedDetails"
+                                },
+                                {
+                                    "systemName": "deleteFeed"
+                                },
+                                {
+                                    "systemName": "enableFeed"
+                                },
+                                {
+                                    "systemName": "exportFeed"
+                                }
+                            ]
+                        },
+                        {
+                            "systemName": "accessFeedOperations"
+                        },
+                        {
+                            "systemName": "changeFeedPermissions"
+                        }
+                    ]
+                }
+            ]
+        },
+        "roleMemberships": [],
+        "feedRoleMemberships": [],
+        "categoryName": "System",
+        "systemCategoryName": "system",
+        "categoryId": "05da4240-d2d2-4982-906b-69fb0c8c2135",
+        "categoryIcon": "cloud",
+        "categoryIconColor": "#FFCA28",
+        "id": "ca5e7806-cff3-4096-8f67-7efd8ba2431a",
+        "feedId": "ca5e7806-cff3-4096-8f67-7efd8ba2431a",
+        "feedName": "Index Text Service",
+        "systemFeedName": "index_text_service",
+        "active": true,
+        "state": "ENABLED",
+        "updateDate": "05/28/2018 @ 9:40:41PM",
+        "templateName": "Index Text Service",
+        "templateId": "bfa0e91d-d99f-4613-bf20-59db5fca3933",
+        "categoryAndFeedSystemName": "system.index_text_service",
+        "categoryAndFeedDisplayName": "System.Index Text Service"
+    },
+    {
+        "owner": {
+            "displayName": "Data Lake Administrator",
+            "email": null,
+            "enabled": true,
+            "groups": [
+                "designers",
+                "admin",
+                "user"
+            ],
+            "systemName": "dladmin"
+        },
+        "allowedActions": {
+            "actions": [
+                {
+                    "systemName": "accessFeed",
+                    "actions": [
+                        {
+                            "systemName": "editFeedSummary"
+                        },
+                        {
+                            "systemName": "accessFeedDetails",
+                            "actions": [
+                                {
+                                    "systemName": "editFeedDetails"
+                                },
+                                {
+                                    "systemName": "deleteFeed"
+                                },
+                                {
+                                    "systemName": "enableFeed"
+                                },
+                                {
+                                    "systemName": "exportFeed"
+                                }
+                            ]
+                        },
+                        {
+                            "systemName": "accessFeedOperations"
+                        },
+                        {
+                            "systemName": "changeFeedPermissions"
+                        }
+                    ]
+                }
+            ]
+        },
+        "roleMemberships": [],
+        "feedRoleMemberships": [],
+        "categoryName": "Toy Store",
+        "systemCategoryName": "toy_store",
+        "categoryId": "9d4a653b-82d4-4709-a33d-eb0fb2725b0a",
+        "categoryIcon": "redeem",
+        "categoryIconColor": "#66BB6A",
+        "id": "e3ad5e33-df15-46bf-a8b0-84f54ba6a135",
+        "feedId": "e3ad5e33-df15-46bf-a8b0-84f54ba6a135",
+        "feedName": "Products",
+        "systemFeedName": "products",
+        "active": true,
+        "state": "DISABLED",
+        "updateDate": "05/28/2018 @ 9:40:41PM",
+        "templateName": "Advanced Ingest",
+        "templateId": "20ad74fa-226f-4a50-a766-4dd1c88bb584",
+        "categoryAndFeedSystemName": "toy_store.products",
+        "categoryAndFeedDisplayName": "Toy Store.Products"
+    },
+    {
+        "owner": {
+            "displayName": "Data Lake Administrator",
+            "email": null,
+            "enabled": true,
+            "groups": [
+                "designers",
+                "admin",
+                "user"
+            ],
+            "systemName": "dladmin"
+        },
+        "allowedActions": {
+            "actions": [
+                {
+                    "systemName": "accessFeed",
+                    "actions": [
+                        {
+                            "systemName": "editFeedSummary"
+                        },
+                        {
+                            "systemName": "accessFeedDetails",
+                            "actions": [
+                                {
+                                    "systemName": "editFeedDetails"
+                                },
+                                {
+                                    "systemName": "deleteFeed"
+                                },
+                                {
+                                    "systemName": "enableFeed"
+                                },
+                                {
+                                    "systemName": "exportFeed"
+                                }
+                            ]
+                        },
+                        {
+                            "systemName": "accessFeedOperations"
+                        },
+                        {
+                            "systemName": "changeFeedPermissions"
+                        }
+                    ]
+                }
+            ]
+        },
+        "roleMemberships": [],
+        "feedRoleMemberships": [],
+        "categoryName": "Concerts",
+        "systemCategoryName": "concerts",
+        "categoryId": "4bb4a652-4551-47be-acf8-22c441cbde6e",
+        "categoryIcon": "settings_voice",
+        "categoryIconColor": "#90A4AE",
+        "id": "00e8a49e-ad2b-4c62-95ae-74a80ce2c98e",
+        "feedId": "00e8a49e-ad2b-4c62-95ae-74a80ce2c98e",
+        "feedName": "Venues",
+        "systemFeedName": "venues",
+        "active": true,
+        "state": "ENABLED",
+        "updateDate": "05/28/2018 @ 9:40:41PM",
+        "templateName": "Advanced Ingest",
+        "templateId": "20ad74fa-226f-4a50-a766-4dd1c88bb584",
+        "categoryAndFeedSystemName": "concerts.venues",
+        "categoryAndFeedDisplayName": "Concerts.Venues"
+    },
+    {
+        "owner": {
+            "displayName": "Data Lake Administrator",
+            "email": null,
+            "enabled": true,
+            "groups": [
+                "designers",
+                "admin",
+                "user"
+            ],
+            "systemName": "dladmin"
+        },
+        "allowedActions": {
+            "actions": [
+                {
+                    "systemName": "accessFeed",
+                    "actions": [
+                        {
+                            "systemName": "editFeedSummary"
+                        },
+                        {
+                            "systemName": "accessFeedDetails",
+                            "actions": [
+                                {
+                                    "systemName": "editFeedDetails"
+                                },
+                                {
+                                    "systemName": "deleteFeed"
+                                },
+                                {
+                                    "systemName": "enableFeed"
+                                },
+                                {
+                                    "systemName": "exportFeed"
+                                }
+                            ]
+                        },
+                        {
+                            "systemName": "accessFeedOperations"
+                        },
+                        {
+                            "systemName": "changeFeedPermissions"
+                        }
+                    ]
+                }
+            ]
+        },
+        "roleMemberships": [],
+        "feedRoleMemberships": [],
+        "categoryName": "Concerts",
+        "systemCategoryName": "concerts",
+        "categoryId": "4bb4a652-4551-47be-acf8-22c441cbde6e",
+        "categoryIcon": "settings_voice",
+        "categoryIconColor": "#90A4AE",
+        "id": "50ff8362-66d9-430e-bd79-0e333665a09b",
+        "feedId": "50ff8362-66d9-430e-bd79-0e333665a09b",
+        "feedName": "Events",
+        "systemFeedName": "events",
+        "active": true,
+        "state": "ENABLED",
+        "updateDate": "05/28/2018 @ 9:40:41PM",
+        "templateName": "Advanced Ingest",
+        "templateId": "20ad74fa-226f-4a50-a766-4dd1c88bb584",
+        "categoryAndFeedSystemName": "concerts.events",
+        "categoryAndFeedDisplayName": "Concerts.Events"
+    },
+    {
+        "owner": {
+            "displayName": "Data Lake Administrator",
+            "email": null,
+            "enabled": true,
+            "groups": [
+                "designers",
+                "admin",
+                "user"
+            ],
+            "systemName": "dladmin"
+        },
+        "allowedActions": {
+            "actions": [
+                {
+                    "systemName": "accessFeed",
+                    "actions": [
+                        {
+                            "systemName": "editFeedSummary"
+                        },
+                        {
+                            "systemName": "accessFeedDetails",
+                            "actions": [
+                                {
+                                    "systemName": "editFeedDetails"
+                                },
+                                {
+                                    "systemName": "deleteFeed"
+                                },
+                                {
+                                    "systemName": "enableFeed"
+                                },
+                                {
+                                    "systemName": "exportFeed"
+                                }
+                            ]
+                        },
+                        {
+                            "systemName": "accessFeedOperations"
+                        },
+                        {
+                            "systemName": "changeFeedPermissions"
+                        }
+                    ]
+                }
+            ]
+        },
+        "roleMemberships": [],
+        "feedRoleMemberships": [],
+        "categoryName": "System",
+        "systemCategoryName": "system",
+        "categoryId": "05da4240-d2d2-4982-906b-69fb0c8c2135",
+        "categoryIcon": "cloud",
+        "categoryIconColor": "#FFCA28",
+        "id": "ca5e7806-cff3-4096-8f67-7efd8ba2431a",
+        "feedId": "ca5e7806-cff3-4096-8f67-7efd8ba2431a",
+        "feedName": "Index Text Service",
+        "systemFeedName": "index_text_service",
+        "active": true,
+        "state": "DISABLED",
+        "updateDate": "05/28/2018 @ 9:40:41PM",
+        "templateName": "Index Text Service",
+        "templateId": "bfa0e91d-d99f-4613-bf20-59db5fca3933",
+        "categoryAndFeedSystemName": "system.index_text_service",
+        "categoryAndFeedDisplayName": "System.Index Text Service"
+    },
+    {
+        "owner": {
+            "displayName": "Data Lake Administrator",
+            "email": null,
+            "enabled": true,
+            "groups": [
+                "designers",
+                "admin",
+                "user"
+            ],
+            "systemName": "dladmin"
+        },
+        "allowedActions": {
+            "actions": [
+                {
+                    "systemName": "accessFeed",
+                    "actions": [
+                        {
+                            "systemName": "editFeedSummary"
+                        },
+                        {
+                            "systemName": "accessFeedDetails",
+                            "actions": [
+                                {
+                                    "systemName": "editFeedDetails"
+                                },
+                                {
+                                    "systemName": "deleteFeed"
+                                },
+                                {
+                                    "systemName": "enableFeed"
+                                },
+                                {
+                                    "systemName": "exportFeed"
+                                }
+                            ]
+                        },
+                        {
+                            "systemName": "accessFeedOperations"
+                        },
+                        {
+                            "systemName": "changeFeedPermissions"
+                        }
+                    ]
+                }
+            ]
+        },
+        "roleMemberships": [],
+        "feedRoleMemberships": [],
+        "categoryName": "Toy Store",
+        "systemCategoryName": "toy_store",
+        "categoryId": "9d4a653b-82d4-4709-a33d-eb0fb2725b0a",
+        "categoryIcon": "redeem",
+        "categoryIconColor": "#66BB6A",
+        "id": "e3ad5e33-df15-46bf-a8b0-84f54ba6a135",
+        "feedId": "e3ad5e33-df15-46bf-a8b0-84f54ba6a135",
+        "feedName": "Products",
+        "systemFeedName": "products",
+        "active": true,
+        "state": "DISABLED",
+        "updateDate": "05/28/2018 @ 9:40:41PM",
+        "templateName": "Advanced Ingest",
+        "templateId": "20ad74fa-226f-4a50-a766-4dd1c88bb584",
+        "categoryAndFeedSystemName": "toy_store.products",
+        "categoryAndFeedDisplayName": "Toy Store.Products"
+    },
+    {
+        "owner": {
+            "displayName": "Data Lake Administrator",
+            "email": null,
+            "enabled": true,
+            "groups": [
+                "designers",
+                "admin",
+                "user"
+            ],
+            "systemName": "dladmin"
+        },
+        "allowedActions": {
+            "actions": [
+                {
+                    "systemName": "accessFeed",
+                    "actions": [
+                        {
+                            "systemName": "editFeedSummary"
+                        },
+                        {
+                            "systemName": "accessFeedDetails",
+                            "actions": [
+                                {
+                                    "systemName": "editFeedDetails"
+                                },
+                                {
+                                    "systemName": "deleteFeed"
+                                },
+                                {
+                                    "systemName": "enableFeed"
+                                },
+                                {
+                                    "systemName": "exportFeed"
+                                }
+                            ]
+                        },
+                        {
+                            "systemName": "accessFeedOperations"
+                        },
+                        {
+                            "systemName": "changeFeedPermissions"
+                        }
+                    ]
+                }
+            ]
+        },
+        "roleMemberships": [],
+        "feedRoleMemberships": [],
+        "categoryName": "Concerts",
+        "systemCategoryName": "concerts",
+        "categoryId": "4bb4a652-4551-47be-acf8-22c441cbde6e",
+        "categoryIcon": "settings_voice",
+        "categoryIconColor": "#90A4AE",
+        "id": "00e8a49e-ad2b-4c62-95ae-74a80ce2c98e",
+        "feedId": "00e8a49e-ad2b-4c62-95ae-74a80ce2c98e",
+        "feedName": "Venues",
+        "systemFeedName": "venues",
+        "active": true,
+        "state": "ENABLED",
+        "updateDate": "05/28/2018 @ 9:40:41PM",
+        "templateName": "Advanced Ingest",
+        "templateId": "20ad74fa-226f-4a50-a766-4dd1c88bb584",
+        "categoryAndFeedSystemName": "concerts.venues",
+        "categoryAndFeedDisplayName": "Concerts.Venues"
+    },
+    {
+        "owner": {
+            "displayName": "Data Lake Administrator",
+            "email": null,
+            "enabled": true,
+            "groups": [
+                "designers",
+                "admin",
+                "user"
+            ],
+            "systemName": "dladmin"
+        },
+        "allowedActions": {
+            "actions": [
+                {
+                    "systemName": "accessFeed",
+                    "actions": [
+                        {
+                            "systemName": "editFeedSummary"
+                        },
+                        {
+                            "systemName": "accessFeedDetails",
+                            "actions": [
+                                {
+                                    "systemName": "editFeedDetails"
+                                },
+                                {
+                                    "systemName": "deleteFeed"
+                                },
+                                {
+                                    "systemName": "enableFeed"
+                                },
+                                {
+                                    "systemName": "exportFeed"
+                                }
+                            ]
+                        },
+                        {
+                            "systemName": "accessFeedOperations"
+                        },
+                        {
+                            "systemName": "changeFeedPermissions"
+                        }
+                    ]
+                }
+            ]
+        },
+        "roleMemberships": [],
+        "feedRoleMemberships": [],
+        "categoryName": "Concerts",
+        "systemCategoryName": "concerts",
+        "categoryId": "4bb4a652-4551-47be-acf8-22c441cbde6e",
+        "categoryIcon": "settings_voice",
+        "categoryIconColor": "#90A4AE",
+        "id": "50ff8362-66d9-430e-bd79-0e333665a09b",
+        "feedId": "50ff8362-66d9-430e-bd79-0e333665a09b",
+        "feedName": "Events",
+        "systemFeedName": "events",
+        "active": true,
+        "state": "ENABLED",
+        "updateDate": "05/28/2018 @ 9:40:41PM",
+        "templateName": "Advanced Ingest",
+        "templateId": "20ad74fa-226f-4a50-a766-4dd1c88bb584",
+        "categoryAndFeedSystemName": "concerts.events",
+        "categoryAndFeedDisplayName": "Concerts.Events"
+    }
+]

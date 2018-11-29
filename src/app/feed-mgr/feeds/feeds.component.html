@@ -1,6 +1,6 @@
 
   <td-layout-manage-list [opened]="media.registerQuery('gt-sm') | async" [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'push'"
-    [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '257px' : '100%'">
+    [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '257px' : '100%'" class="feeds-table">
     <mat-toolbar td-sidenav-content>
       <mat-toolbar-row>
         <!-- <mat-icon>linear_scale</mat-icon> -->
@@ -60,5 +60,22 @@
         (pageSizeChanged)="onPageSizeChange($event)"
         [allowedPageSize]="[5,10,20,50]"
         >
+
+        <ng-template tdDataTableTemplate="state" let-value="value" let-row="row" let-column="column">
+          <span [ngClass]="{'enabled':row.state == 'ENABLED','disabled':row.state == 'DISABLED'}">
+            <mat-icon size="15" class="marginRight center-align" *ngIf="value === 'ENABLED'" style="color : #009933">check_circle</mat-icon>
+            <mat-icon size="15" class="marginRight center-align" *ngIf="value !== 'ENABLED'" color="accent">block</mat-icon>
+            <span>{{value}}</span>
+         </span>
+        </ng-template>
+
+        <ng-template tdDataTableTemplate="categoryName" let-value="value" let-row="row" let-column="column">
+          <mat-icon size="20" class="marginRight" [ngStyle]="{'color':row.categoryIconColor}">
+              {{row.categoryIcon}}
+          </mat-icon>
+          <span>{{row.categoryName}}</span>
+        </ng-template>
+
+
     </filtered-paginated-table-view>
   </td-layout-manage-list>
