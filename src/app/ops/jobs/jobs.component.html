@@ -76,5 +76,9 @@
       <div *ngIf="row.state == 'waiting'" style="color : #f3753f !important">{{row.description}}</div>
       <div *ngIf="row.state == 'executed'" style="color : #fb8c00 !important">{{row.description}}</div>
   </ng-template>
+  <ng-template tdDataTableTemplate="action" let-value="value" let-row="row" let-column="column">
+    <button mat-button class="raised-button stopButton" *ngIf="row.state != 'executed'">STOP</button>
+    <button mat-button class="raised-button deleteButton" *ngIf="row.state != 'running'">DELETE</button>
+  </ng-template>
   </filtered-paginated-table-view>
 </td-layout-manage-list>

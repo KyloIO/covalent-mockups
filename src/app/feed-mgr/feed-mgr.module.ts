@@ -30,6 +30,7 @@ import { userRoutes } from './feed-mgr.routes';
 
 import { USER_PROVIDER, USERS_API } from './services/feed-mgr.service';
 import { KyloCommonModule } from '../common.module';
+import { LocalStorageService } from './services/local-storage.service';
 @NgModule({
   declarations: [
     FeedsComponent,
@@ -66,7 +67,7 @@ import { KyloCommonModule } from '../common.module';
   ], // modules needed to run this module
   providers: [
     { provide: USERS_API, useValue: ''},
-    USER_PROVIDER,
+    USER_PROVIDER, LocalStorageService
   ],
 })
 export class FeedMgrModule {}

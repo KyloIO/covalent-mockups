@@ -1,17 +1,17 @@
 .mat-card-content {
     padding:  0 !important;
 }
-.td-data-table-cell {
+.operations-jobs .td-data-table-cell {
     border-bottom: 1px;
     border-bottom-color: rgba(0, 0, 0, 0.12);
     border-bottom-style: solid;
     height: 70px;
 }
-.td-data-table-row, .td-data-table-cell:first-child, .td-data-table-row:last-child .td-data-table-cell{
+.operations-jobs .td-data-table-row, .operations-jobs .td-data-table-cell:first-child, .td-data-table-row:last-child .td-data-table-cell{
     border-bottom: 0px !important;
 }
 
-.td-data-table-cell-content-wrapper:first-child{
+.operations-jobs .td-data-table-cell-content-wrapper:first-child{
     padding-left: 18px !important;
 }
 .operations-jobs table[td-data-table] .td-data-table-column:first-child {
@@ -22,7 +22,7 @@
     background-position-x: 12px;
 }
 
-td.td-data-table-cell>div {
+.operations-jobs td.td-data-table-cell>div {
     display: block !important;
 }
 
@@ -34,4 +34,26 @@ td.td-data-table-cell>div {
 
 mat-nav-list [mat-list-item].active>div {
     color: #f3753f;
+}
+.raised-button {
+    margin-right: 10px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 
+              0 1px 5px 0 rgba(0, 0, 0, 0.12), 
+              0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    &:active {
+        box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                    0 3px 14px 2px rgba(0, 0, 0, 0.12),
+                    0 5px 5px -3px rgba(0, 0, 0, 0.4);
+    }   
+    &.deleteButton {
+        border: 1px solid #dcd9d9;
+        background-color: #dcd9d9;
+    }
+    
+    &.stopButton {
+        border: 1px solid #f92222;
+        background-color: #f92222;
+    }
+
 }

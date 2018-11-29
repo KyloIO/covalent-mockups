@@ -72,5 +72,79 @@
     "icon": "colorize",
     "color": "orange-600",
     "favorite": false
+  },
+  {
+    "name": "feed-cat-copy-1542693785167",
+    "icon": "new_releases",
+    "color": "deep-purple-800",
+    "favorite": true
+    
+  },
+  {
+    "name": "feed-cat-copy-test-enwQh",
+    "icon": "android",
+    "color": "orange-800",
+    "favorite": false
+  },
+  {
+    "name": "feed-cat-copy-1542681593174",
+    "icon": "vertical_align_center",
+    "color": "amber-600",
+    "favorite": false
+  },
+  {
+    "name": "feed-cat-copy-1542681081357",
+    "icon": "keyboard_backspace",
+    "color": "deep-purple-900",
+    "favorite": true
+    
+  },
+  {
+    "name": "feed-cat-copy-1542680546760",
+    "icon": "nfc",
+    "color": "brown-900",
+    "favorite": false
+  },
+  {
+    "name": "feed-cat-copy-1542680376690",
+    "icon": "tag_faces",
+    "color": "deep-orange-900",
+    "favorite": false
+  },
+  {
+    "name": "feed-cat-copy-1542348609319",
+    "icon": "mic_none",
+    "color": "cyan-600",
+    "favorite": false
+  },
+  {
+    "name": "feed-cat-copy-1542680208979",
+    "icon": "keyboard_arrow_up",
+    "color": "deep-orange-600",
+    "favorite": false
+  },
+  {
+    "name": "feed-cat-copy-1542680057917",
+    "icon": "mic_off",
+    "color": "purple-600",
+    "favorite": false
+  },
+  {
+    "name": "feed-cat-copy-1542679804973",
+    "icon": "wb_iridescent",
+    "color": "indigo-800",
+    "favorite": false
+  },
+  {
+    "name": "feed-cat-copy-1542672023353",
+    "icon": "border_inner",
+    "color": "blue-grey-600",
+    "favorite": false
+  },
+  {
+    "name": "feed-cat-copy-1542671352169",
+    "icon": "colorize",
+    "color": "orange-600",
+    "favorite": false
   }
 ]

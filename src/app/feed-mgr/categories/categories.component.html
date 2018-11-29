@@ -1,53 +1,92 @@
 <mat-toolbar style="margin-bottom: 25px;">
-    <mat-toolbar-row>
-      <div flex layout="row" layout-align="start center">
-        <button mat-icon-button td-menu-button [tdLayoutToggle]="true">
-          <mat-icon>menu</mat-icon>
-        </button>
-        <span id="overview">CATEGORIES</span>
-        <span flex></span>
-        <mat-icon>help</mat-icon>
-      </div>
-    </mat-toolbar-row>
-  </mat-toolbar>
-    <div layout-gt-xs="row" layout-align-gt-xs="center center">
-      <div flex-gt-xs="80">
-        <div *ngIf="apps && apps?.length != 0" layout="column">
-            <div class="sub-header">
-                <div layout="row" layout-align="start center">
-                    <h3 flex class="sub-header-1">RECENT APPLICATIONS AND SCRIPTS</h3>
-                    <a mat-button class="sub-header-2">VIEW MORE</a>
-                </div>
-                <mat-divider></mat-divider>
+  <mat-toolbar-row>
+    <div flex layout="row" layout-align="start center">
+      <button mat-icon-button td-menu-button [tdLayoutToggle]="true">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span id="overview">CATEGORIES</span>
+      <span flex></span>
+      <mat-icon>help</mat-icon>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div layout-gt-xs="row" layout-align-gt-xs="center center">
+  <div flex-gt-xs="80">
+      <div *ngIf="favorites && favorites?.length != 0" layout="column">
+        <div class="sub-header">
+            <div layout="row" layout-align="start center">
+                <h3 flex class="sub-header-1">FAVORITES</h3>
             </div>
-          <div layout="row" layout-wrap>
-            <ng-template let-app let-index="index" ngFor [ngForOf]="apps">
-              <div flex-gt-xs="25" flex-xs="50">
-                <mat-card href class="mat-card-colored">
-                    <div layout="row">
-                      <div [ngClass]="'tc-white bgc-' + app?.color" class="mat-card-left-section" layout="column" layout-align="center center">
-                        <mat-icon class="text-30">{{app.icon}}</mat-icon>
-                      </div>
-                      <div flex class="mat-card-right-section">
-                        <div layout="column" layout-padding class="mat-card-right-section card-content-sm" style="min-height:64px;">
-                          <div class="mat-card-subheading-2 mat-card-right-section no-margin">{{app.name}}</div>
-                          <div class="category-icons mat-card-right-section"> {{app.type}} </div>
-                        </div>
-                        <mat-divider></mat-divider>
-                        <div layout="row" layout-align="end center">
-                          <button mat-icon-button>
-                            <mat-icon><span class="category-icons">edit</span></mat-icon>
-                          </button>
-                          <button mat-icon-button>
-                            <mat-icon class="category-icons">{{app.favorite ? 'favorite' : 'favorite_border'}}</mat-icon>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                </mat-card>
-              </div>
-            </ng-template>
-          </div>
+            <mat-divider></mat-divider>
         </div>
+      <div layout="row" layout-wrap>
+        <ng-template let-favorite let-index="index" ngFor [ngForOf]="favorites">
+          <div flex-gt-xs="25" flex-xs="50">
+            <mat-card href class="mat-card-colored">
+                <div layout="row">
+                  <div [ngClass]="'tc-white bgc-' + favorite?.color" class="mat-card-left-section" layout="column" layout-align="center center">
+                    <mat-icon class="text-30">{{favorite.icon}}</mat-icon>
+                  </div>
+                  <div flex class="mat-card-right-section">
+                    <div layout="column" layout-padding class="mat-card-right-section card-content-sm" style="min-height:64px;">
+                      <div class="mat-card-subheading-2 mat-card-right-section no-margin">{{favorite.name}}</div>
+                      <div class="category-icons mat-card-right-section"> {{favorite.type}} </div>
+                    </div>
+                    <mat-divider></mat-divider>
+                    <div layout="row" layout-align="end center">
+                      <button mat-icon-button>
+                        <mat-icon><span class="category-icons">edit</span></mat-icon>
+                      </button>
+
+                      <button mat-icon-button (click)="removeFavorite(index)">
+                        <mat-icon class="category-icons">favorite</mat-icon>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </mat-card>
+          </div>
+        </ng-template>
       </div>
     </div>
+
+
+    <div *ngIf="apps && apps?.length != 0" layout="column">
+        <div class="sub-header">
+            <div layout="row" layout-align="start center">
+                <h3 flex class="sub-header-1">ALL CATEGORIES</h3>
+            </div>
+            <mat-divider></mat-divider>
+        </div>
+      <div layout="row" layout-wrap>
+        <ng-template let-app let-index="index" ngFor [ngForOf]="apps">
+          <div flex-gt-xs="25" flex-xs="50">
+            <mat-card href class="mat-card-colored">
+                <div layout="row">
+                  <div [ngClass]="'tc-white bgc-' + app?.color" class="mat-card-left-section" layout="column" layout-align="center center">
+                    <mat-icon class="text-30">{{app.icon}}</mat-icon>
+                  </div>
+                  <div flex class="mat-card-right-section">
+                    <div layout="column" layout-padding class="mat-card-right-section card-content-sm" style="min-height:64px;">
+                      <div class="mat-card-subheading-2 mat-card-right-section no-margin">{{app.name}}</div>
+                      <div class="category-icons mat-card-right-section"> {{app.type}} </div>
+                    </div>
+                    <mat-divider></mat-divider>
+                    <div layout="row" layout-align="end center">
+                      <button mat-icon-button>
+                        <mat-icon><span class="category-icons">edit</span></mat-icon>
+                      </button>
+
+                      <button mat-icon-button (click)="makeFavorite(app)">
+                        <mat-icon class="category-icons">favorite_border</mat-icon>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </mat-card>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

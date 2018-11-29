@@ -20,8 +20,9 @@ export class JobsComponent  extends BaseFilteredPaginatedTableView implements On
   public columns: ITdDataTableColumn[] = [
     { name: 'state', label :'', width : 60,sortable: false, filter: true },
     { name: 'jobName', label: 'Job Name', sortable: true, filter: false },
-    { name: 'owner', label: 'Owner', sortable: true, filter: false},
-    { name: 'staged', label: 'Type', sortable: true, filter: false},
+    { name: 'start-time', label: 'Start Time', sortable: true, filter: false},
+    { name: 'run-time', label: 'Run Time', sortable: true, filter: false},
+    { name: 'action', label: 'Actions', sortable: false, filter: false}
   ];
   
   sortBy : string = 'jobName';
