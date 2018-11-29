@@ -19,21 +19,21 @@
       <mat-icon matListIcon>list</mat-icon>
       All
     </a>
-    <a mat-list-item [class.active]="searchTerm == 'executed'"  (click) = "selectFilter('executed')">
+    <a mat-list-item [class.active]="searchTerm == 'COMPLETED'"  (click) = "selectFilter('COMPLETED')">
       <mat-icon matListIcon>check_circle</mat-icon>
-      Executed
+      COMPLETED
     </a>
-    <a mat-list-item [class.active]="searchTerm == 'running'"  (click) = "selectFilter('running')">
+    <a mat-list-item [class.active]="searchTerm == 'RUNNING'"  (click) = "selectFilter('RUNNING')">
       <mat-icon matListIcon>fast_forward</mat-icon>
-      Running
+      RUNNING
     </a>
-    <a mat-list-item [class.active]="searchTerm == 'scheduled'"  (click) = "selectFilter('scheduled')">
+    <a mat-list-item [class.active]="searchTerm == 'SCHEDULED'"  (click) = "selectFilter('SCHEDULED')">
       <mat-icon matListIcon>access_time</mat-icon>
-      Scheduled
+      SCHEDULED
     </a>
-    <a mat-list-item [class.active]="searchTerm == 'waiting'"  (click) = "selectFilter('waiting')">
+    <a mat-list-item [class.active]="searchTerm == 'WAITING'"  (click) = "selectFilter('WAITING')">
       <mat-icon matListIcon>more_horiz</mat-icon>
-      Waiting
+      WAITING
     </a>
   </mat-nav-list>
   <mat-toolbar>
@@ -63,22 +63,21 @@
       >
       <ng-template tdDataTableTemplate="state" let-value="value" let-row="row" let-column="column">
         <div layout="row">
-          <mat-icon matListAvatar *ngIf="value == 'running'" class="image-shadow" style="color : #43a047 !important">fast_forward</mat-icon>
-          <mat-icon matListAvatar *ngIf="value == 'scheduled'" class="image-shadow" style="color : #43a047 !important">schedule</mat-icon>
-          <mat-icon matListAvatar *ngIf="value == 'waiting'" class="image-shadow" style="color: #f3753f !important;">rowing</mat-icon>
-          <mat-icon matListAvatar *ngIf="value == 'executed'" class="image-shadow" style="color: #fb8c00 !important;">remove_circle_outline</mat-icon>
+          <mat-icon matListAvatar *ngIf="value == 'RUNNING'" class="image-shadow" style="color : #43a047 !important">fast_forward</mat-icon>
+          <mat-icon matListAvatar *ngIf="value == 'SCHEDULED'" class="image-shadow" style="color : #43a047 !important">schedule</mat-icon>
+          <mat-icon matListAvatar *ngIf="value == 'WAITING'" class="image-shadow" style="color: #f3753f !important;">rowing</mat-icon>
+          <mat-icon matListAvatar *ngIf="value == 'COMPLETED'" class="image-shadow" style="color: #fb8c00 !important;">remove_circle_outline</mat-icon>
         </div>
     </ng-template>
     <ng-template tdDataTableTemplate="jobName" let-value="value" let-row="row" let-column="column">
       <div>{{row.jobName}}</div>
-      <div *ngIf="row.state == 'running'" style="color : #43a047 !important">{{row.description}}</div>
-      <div *ngIf="row.state == 'scheduled'" style="color : #43a047 !important">{{row.description}}</div>
-      <div *ngIf="row.state == 'waiting'" style="color : #f3753f !important">{{row.description}}</div>
-      <div *ngIf="row.state == 'executed'" style="color : #fb8c00 !important">{{row.description}}</div>
+      <div *ngIf="row.state == 'RUNNING'" style="color : #43a047 !important">{{row.state}}</div>
+      <div *ngIf="row.state == 'SCHEDULED'" style="color : #43a047 !important">{{row.state}}</div>
+      <div *ngIf="row.state == 'WAITING'" style="color : #f3753f !important">{{row.state}}</div>
+      <div *ngIf="row.state == 'COMPLETED'" style="color : #fb8c00 !important">{{row.state}}</div>
   </ng-template>
   <ng-template tdDataTableTemplate="action" let-value="value" let-row="row" let-column="column">
-    <button mat-button class="raised-button stopButton" *ngIf="row.state != 'executed'">STOP</button>
-    <button mat-button class="raised-button deleteButton" *ngIf="row.state != 'running'">DELETE</button>
+    <button mat-button color="accent" class="raised-button stopButton" *ngIf="row.state != 'COMPLETED'">ABANDON</button>
   </ng-template>
   </filtered-paginated-table-view>
 </td-layout-manage-list>

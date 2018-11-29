@@ -21,11 +21,11 @@ export class JobsComponent  extends BaseFilteredPaginatedTableView implements On
     { name: 'state', label :'', width : 60,sortable: false, filter: true },
     { name: 'jobName', label: 'Job Name', sortable: true, filter: false },
     { name: 'start-time', label: 'Start Time', sortable: true, filter: false},
-    { name: 'run-time', label: 'Run Time', sortable: true, filter: false},
+    { name: 'run-time', label: 'Run Time', sortable: false, filter: false},
     { name: 'action', label: 'Actions', sortable: false, filter: false}
   ];
   
-  sortBy : string = 'jobName';
+  sortBy : string = 'start-time';
 
   constructor(private _titleService: Title,
     public media: TdMediaService,
@@ -42,7 +42,7 @@ export class JobsComponent  extends BaseFilteredPaginatedTableView implements On
   async load(): Promise<void> {
     this.http.get("data/jobs.json").toPromise().then((jobs : any) => {
       this.jobs = jobs;
-      super.setSortBy('jobName');
+      super.setSortBy(this.sortBy);
       super.setDataAndColumnSchema(this.jobs,this.columns);
       super.filter();
     })

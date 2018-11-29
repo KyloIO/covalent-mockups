@@ -1,90 +1,90 @@
 [
     {
-        "jobName":"first-executed",
+        "jobName":"Music.Top Artists",
         "description": "first execution description",
         "owner":"jack russel",
-        "start-time":"2018-11-25T07:02:50.176Z",
-        "run-time":"2018-11-25T07:02:50.176Z",
-        "state":"running"
+        "start-time":"Nov 14, 2018 17:09:14",
+        "run-time":"41 sec",
+        "state":"RUNNING"
     },
     {
-        "jobName":"second-executed",
+        "jobName":"Music.Top Artists",
         "description": "second execution description",
         "owner":"kurt russel",
-        "start-time":"2018-11-25T07:02:50.176Z",
-        "run-time":"2018-11-25T07:02:50.176Z",
-        "state":"running"
+        "start-time":"Nov 17, 2018 17:09:14",
+        "run-time":"4 sec",
+        "state":"RUNNING"
     },
     {
-        "jobName":"third",
+        "jobName":"Music.Top Artists",
         "description": "third execution description",
         "owner":"jack simple spelling",
-        "start-time":"2018-11-25T07:02:50.176Z",
-        "run-time":"2018-11-25T07:02:50.176Z",
-        "state":"waiting"
+        "start-time":"Nov 24, 2018 17:09:14",
+        "run-time":"43 sec",
+        "state":"WAITING"
     },
     {
-        "jobName":"fourth",
+        "jobName":"Music.Top Artists",
         "description": "fourth execution description",
         "owner":"jack gyllenhall",
-        "start-time":"2018-11-25T07:02:50.176Z",
-        "run-time":"2018-11-25T07:02:50.176Z",
-        "state":"waiting"
+        "start-time":"Nov 28, 2018 17:09:14",
+        "run-time":"45 sec",
+        "state":"WAITING"
     },
     {
-        "jobName":"fifth-scheduled1232-1231",
+        "jobName":"Demo.Vantage Ingest",
         "description": "fifth schedule description",
         "owner":"kate loselet",
-        "start-time":"2018-11-25T07:02:50.176Z",
-        "run-time":"2018-11-25T07:02:50.176Z",
-        "state":"scheduled"
+        "start-time":"Nov 6, 2018 17:09:14",
+        "run-time":"3 sec",
+        "state":"SCHEDULED"
     },
     {
-        "jobName":"sixth-job",
+        "jobName":"Demo.Vantage Ingest",
         "description": "sixth job description",
         "owner":"kate winslet",
-        "start-time":"2018-11-25T07:02:50.176Z",
-        "run-time":"2018-11-25T07:02:50.176Z",
-        "state":"scheduled"
+        "start-time":"Nov 29, 2018 17:09:14",
+        "run-time":"10 sec",
+        "state":"SCHEDULED"
     },
     {
-        "jobName":"7thjob-app123-32432",
+        "jobName":"Demo.Vantage Ingest",
         "description": "seventh job description",
         "owner":"tom angry",
-        "start-time":"2018-11-25T07:02:50.176Z",
-        "run-time":"2018-11-25T07:02:50.176Z",
-        "state":"executed"
+        "start-time":"Nov 4, 2018 17:09:14",
+        "run-time":"9 sec",
+        "state":"COMPLETED"
     },
     {
-        "jobName":"eighth",
+        "jobName":"Demo.Vantage Ingest",
         "description": "eighth execution description",
         "owner":"tom happy",
-        "start-time":"2018-11-25T07:02:50.176Z",
-        "run-time":"2018-11-25T07:02:50.176Z",
-        "state":"executed"
+        "start-time":"Nov 18, 2018 17:09:14",
+        "run-time":"20 sec",
+        "state":"COMPLETED"
     },
     {
-        "jobName":"nitnhedfs ssdlfkasdjlfs3",
+        "jobName":"Index.Text Service",
         "description": "ninth schedule description",
         "owner":"tom moody",
-        "start-time":"2018-11-25T07:02:50.176Z",
-        "run-time":"2018-11-25T07:02:50.176Z",
-        "state":"scheduled"
+        "start-time":"Nov 28, 2018 17:09:14",
+        "run-time":"35 sec",
+        "state":"SCHEDULED"
     },
     {
-        "jobName":"32423423409-234-3453",
-        "description": "waiting description",
+        "jobName":"Index.Text Service",
+        "description": "WAITING description",
         "owner":"tom softy",
-        "start-time":"2018-11-25T07:02:50.176Z",
-        "run-time":"2018-11-25T07:02:50.176Z",
-        "state":"waiting"
+        "start-time":"Nov 5, 2018 17:09:14",
+        "run-time":"16 sec",
+        "state":"WAITING"
     },
     {
-        "jobName":"last-job",
-        "description": "running description",
+        "jobName":"Index.Text Service",
+        "description": "RUNNING description",
         "owner":"tom hardy",
-        "start-time":"2018-11-25T07:02:50.176Z",
-        "run-time":"2018-11-25T07:02:50.176Z",
-        "state":"running"
+        "start-time":"Nov 16, 2018 17:09:14",
+        "run-time":"12 sec",
+        "state":"RUNNING"
     }
 ]
